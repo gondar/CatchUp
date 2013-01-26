@@ -11,11 +11,11 @@ GameBoard.prototype.Get = function(name) {
 }
 
 GameBoard.prototype.MoveRight = function(name) {
-	this._Move(name,1);
+	this._Move(name, 1);
 }
 
 GameBoard.prototype.MoveLeft = function(name) {
-	this._Move(name,-1);
+	this._Move(name, -1);
 }
 
 GameBoard.prototype._Move = function(name, direction){

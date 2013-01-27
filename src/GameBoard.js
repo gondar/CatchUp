@@ -10,6 +10,10 @@ GameBoard.prototype.Get = function(name) {
 	return this.elements.name;
 }
 
+GameBoard.prototype.GetObjectsOnBoard = function() {
+	return this.elements;
+}
+
 GameBoard.prototype.MoveRight = function(name) {
 	this._Move(name, 1);
 }

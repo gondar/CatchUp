@@ -1,0 +1,6 @@
+function RectangleView(model){
+	this.model = model;
+	this._setFabric()
+}
+
+RectangleView.pro

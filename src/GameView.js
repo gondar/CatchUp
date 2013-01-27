@@ -2,12 +2,17 @@ function GameView(gameBoard, boardController){
 	this.gameBoard = gameBoard;
 	this.canvasId = "GameCanvas";
 	this.controller = boardController;
+	this._elementsOnBoard = {};
 }
 
 GameView.prototype.KEYBOARD_LEFT = 37;
 GameView.prototype.KEYBOARD_RIGHT = 39;
 
-GameView.prototype.update = function() {
+GameView.prototype._add = function(name, element) {
+	if (this._elementsOnBoard[name] != true) {
+		this._elementsOnBoard[name] = true;
+		this._canvas.add(element.GetFabric());
+	}
 }
 
 GameView.prototype.CreateFabricInDiv = function(id){
@@ -26,6 +31,16 @@ GameView.prototype.AddKeypressListeners = function() {
 			controller.MovePlayerRight();
 		}
 	})
+}
+
+GameView.prototype.Update = function() {
+	var elements = this.gameBoard.GetObjectsOnBoard();
+	for (var key in elements) {
+		var view = elements[key].GetView();
+		this._add(key, view);
+		view.Update();
+	}
+	this._canvas.renderAll();
 }
 
 GameView.prototype.MockCreateRectangle = function(){

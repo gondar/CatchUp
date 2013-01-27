@@ -9,12 +9,20 @@
   <!-- include source files here... -->
   <script type="text/javascript" src="src/GameBoard.js"></script>  
   <script type="text/javascript" src="src/GameObject.js"></script>  
-  <script type="text/javascript" src="src/GameView.js"></script>
+  <script type="text/javascript" src="src/GameView.js"></script>  
+  <script type="text/javascript" src="src/RectangleView.js"></script>
+  <script type="text/javascript" src="src/GameController.js"></script>
   <script type="text/javascript">
   $(function() {
-		var game = new GameView(null);
-		game.CreateFabricInDiv("#Game");
-		game.MockCreateRectangle();
+		//var gameView = new GameView(new GameBoard(),null);
+		//gameView.CreateFabricInDiv("#Game");
+		//gameView.MockCreateRectangle();
+		var player = new GameObject(new RectangleView());
+		player.Position = 15;
+		//var playerView = new RectangleView(player);
+		//gameView.Add(playerView);
+		var game = new GameController(new GameBoard(), player);
+		game.Initialize("#Game");
 	});
   </script>
 </head>

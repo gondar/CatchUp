@@ -18,5 +18,17 @@ describe("GameController", function(){
 		it("adds player on board", function(){	
 			expect(board.Add).toHaveBeenCalledWith("player", player);
 		});
+		
+		it("creates fabric in div", function(){
+			expect(view.CreateFabricInDiv).toHaveBeenCalledWith("#id");
+		});
+		
+		it("initializes keyboard listeners", function() {
+			expect(view.AddKeypressListeners).toHaveBeenCalledWith(subject);
+		});
+		
+		it("updates board view", function() {
+			expect(view.Update).toHaveBeenCalled();
+		});
 	});
 });

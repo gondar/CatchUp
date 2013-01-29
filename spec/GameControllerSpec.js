@@ -1,13 +1,22 @@
 describe("GameController", function(){
-	it("During Initialize adds player on board", function(){
-		var view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
-		var board = jasmine.createSpyObj("GameBoard",["Add"]);
-		var player = {Id:12};
-		var subject = new GameController(view, board, player);
-		var divId = "#id";
+	describe("During Initialize", function() {
+		var view;
+		var board;
+		var player;
+		var subject;
 		
-		subject.Initialize(divId);
+		beforeEach(function() {
+			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
+			board = jasmine.createSpyObj("GameBoard",["Add"]);
+			player = {Id:12};
+			subject = new GameController(view, board, player);
+			divId = "#id";
 		
-		expect(board.Add).toHaveBeenCalledWith("player", player);
+			subject.Initialize(divId);
+		});
+		
+		it("adds player on board", function(){	
+			expect(board.Add).toHaveBeenCalledWith("player", player);
+		});
 	});
 });

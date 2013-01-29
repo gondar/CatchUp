@@ -1,13 +1,13 @@
-function GameController(gameBoard, player){
+function GameController(view, gameBoard, player){
 	this._board = gameBoard;
 	this._player = player;
-	this._board.Add("player",player);
+	this._boardView = view;
 }
 
 GameController.prototype.Initialize = function(gameDivId) {
-	this._boardView = new GameView(this._board, this);
+	this._board.Add("player",this._player);
 	this._boardView.CreateFabricInDiv(gameDivId);
-	this._boardView.AddKeypressListeners();
+	this._boardView.AddKeypressListeners(this);
 	this._boardView.Update();
 }
 

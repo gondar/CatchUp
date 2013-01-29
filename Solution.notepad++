@@ -9,8 +9,10 @@
     <Project name="src">
         <File name="src\Calculator.js" />
         <File name="src\GameBoard.js" />
+        <File name="src\GameController.js" />
         <File name="src\GameObject.js" />
         <File name="src\GameView.js" />
+        <File name="src\RectangleView.js" />
     </Project>
     <Project name="html">
         <File name="Game.html" />

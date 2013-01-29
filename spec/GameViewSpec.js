@@ -12,9 +12,9 @@ describe("GameView", function(){
 	it("listens for the left keyboard press", function(){	
 		var board = null;
 		var controller = jasmine.createSpyObj('BoardController',['MovePlayerLeft']);
-		var subject = new GameView(board, controller);
+		var subject = new GameView(board);
 		
-		subject.AddKeypressListeners()
+		subject.AddKeypressListeners(controller)
 		var key = jQuery.Event("keydown");
 		key.which = GameView.prototype.KEYBOARD_LEFT;
 		$(document).trigger(key);
@@ -28,9 +28,9 @@ describe("GameView", function(){
 	it("listens for the right keyboard press", function(){	
 		var board = null;
 		var controller = jasmine.createSpyObj('BoardController',['MovePlayerRight']);
-		var subject = new GameView(board, controller);
+		var subject = new GameView(board);
 		
-		subject.AddKeypressListeners()
+		subject.AddKeypressListeners(controller)
 		var key = jQuery.Event("keydown");
 		key.which = GameView.prototype.KEYBOARD_RIGHT;
 		$(document).trigger(key);

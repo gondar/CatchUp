@@ -1,7 +1,6 @@
-function GameView(gameBoard, boardController){
+function GameView(gameBoard){
 	this.gameBoard = gameBoard;
 	this.canvasId = "GameCanvas";
-	this.controller = boardController;
 	this._elementsOnBoard = {};
 }
 
@@ -20,8 +19,8 @@ GameView.prototype.CreateFabricInDiv = function(id){
 	this._canvas = new fabric.Canvas(this.canvasId);
 }
 
-GameView.prototype.AddKeypressListeners = function() {
-	$(document).keydown({controller: this.controller}, function(event){
+GameView.prototype.AddKeypressListeners = function(controller) {
+	$(document).keydown({controller: controller}, function(event){
 		console&&console.log(event);
 		var controller = event.data.controller;
 		if (event.which == GameView.prototype.KEYBOARD_LEFT){

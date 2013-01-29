@@ -31,4 +31,48 @@ describe("GameController", function(){
 			expect(view.Update).toHaveBeenCalled();
 		});
 	});
+	
+	describe("When Player Move Left Event Received", function(){
+		var view;
+		var board;
+		var subject;
+	
+		beforeEach(function() {
+			view = jasmine.createSpyObj("GameView",["Update"]);
+			board = jasmine.createSpyObj("GameBoard",["MoveLeft"]);
+			subject = new GameController(view, board, null);
+			
+			subject.MovePlayerLeft();
+		});
+		
+		it("passes event to game board", function() {
+			expect(board.MoveLeft).toHaveBeenCalledWith("player");
+		});
+		
+		it("updates board view", function() {
+			expect(view.Update).toHaveBeenCalled();
+		});
+	});
+		
+	describe("When Player Move Right Event Received", function(){
+		var view;
+		var board;
+		var subject;
+	
+		beforeEach(function() {
+			view = jasmine.createSpyObj("GameView",["Update"]);
+			board = jasmine.createSpyObj("GameBoard",["MoveRight"]);
+			subject = new GameController(view, board, null);
+			
+			subject.MovePlayerRight();
+		});
+		
+		it("passes event to game board", function() {
+			expect(board.MoveRight).toHaveBeenCalledWith("player");
+		});
+		
+		it("updates board view", function() {
+			expect(view.Update).toHaveBeenCalled();
+		});
+	});
 });

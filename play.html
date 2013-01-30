@@ -22,10 +22,12 @@
     <script type="text/javascript" src="https://raw.github.com/gondar/CatchUp/master/src/GameController.js"></script>
     <script type="text/javascript">
       $(function() {
-  	    var player = new GameObject(new RectangleView());
-		    player.Position = 15;
-		    var game = new GameController(new GameBoard(), player);
-		    game.Initialize("#Game");
+		var board = new GameBoard();
+		var view = new GameView(board);
+		var player = new GameObject(new RectangleView());
+		player.Position = 15;
+		var game = new GameController(view, board, player);
+		game.Initialize("#Game");
 	    });
     </script>
   </head>

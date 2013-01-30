@@ -1,11 +1,4 @@
 <NotepadPlus>
-    <Project name="spec">
-        <File name="spec\CalculatorSpec.js" />
-        <File name="spec\GameBoardSpec.js" />
-        <File name="spec\GameObjectSpec.js" />
-        <File name="spec\GameViewSpec.js" />
-        <File name="spec\RectangleViewSpec.js" />
-    </Project>
     <Project name="src">
         <File name="src\Calculator.js" />
         <File name="src\GameBoard.js" />
@@ -18,5 +11,13 @@
         <File name="Game.html" />
         <File name="Solution.notepad++" />
         <File name="SpecRunner.html" />
+    </Project>
+    <Project name="spec">
+        <File name="spec\CalculatorSpec.js" />
+        <File name="spec\GameBoardSpec.js" />
+        <File name="spec\GameControllerSpec.js" />
+        <File name="spec\GameObjectSpec.js" />
+        <File name="spec\GameViewSpec.js" />
+        <File name="spec\RectangleViewSpec.js" />
     </Project>
 </NotepadPlus>

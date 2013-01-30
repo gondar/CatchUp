@@ -4,7 +4,16 @@ function GameController(view, gameBoard, player){
 	this._boardView = view;
 }
 
+
+GameController.prototype.TimerEvent = function() {
+	
+}
+
 GameController.prototype.Initialize = function(gameDivId) {
+	var controller = this;
+	setInterval(function() {
+      controller.TimerEvent();
+    }, 100);
 	this._board.Add("player",this._player);
 	this._boardView.CreateFabricInDiv(gameDivId);
 	this._boardView.AddKeypressListeners(this);

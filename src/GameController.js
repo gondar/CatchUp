@@ -6,7 +6,8 @@ function GameController(view, gameBoard, player){
 
 
 GameController.prototype.TimerEvent = function() {
-	
+	this._board.CreateNewFallingObject();
+	this._boardView.Update();
 }
 
 GameController.prototype.Initialize = function(gameDivId) {

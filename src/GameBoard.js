@@ -27,3 +27,6 @@ GameBoard.prototype._Move = function(name, direction){
 	var newPosition = currentPosition + direction;
 	this.elements.name.Position = newPosition;
 }
+
+GameBoard.prototype.CreateNewFallingObject = function(){
+}

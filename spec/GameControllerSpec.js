@@ -8,7 +8,7 @@ describe("GameController", function(){
 		beforeEach(function() {
 			jasmine.Clock.useMock();
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
-			board = jasmine.createSpyObj("GameBoard",["Add"]);
+			board = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize"]);
 			player = {Id:12};
 			subject = new GameController(view, board, player);
 			divId = "#id";
@@ -86,19 +86,22 @@ describe("GameController", function(){
 		beforeEach(function() {
 			jasmine.Clock.useMock();
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
-			board = jasmine.createSpyObj("GameBoard",["Add", ""]);
+			board = jasmine.createSpyObj("GameBoard",["Add", "CreateNewFallingObject"]);
 			player = {Id:12};
 			subject = new GameController(view, board, player);
-			spyOn(subject, 'TimerEvent');
 			divId = "#id";
 		
 			subject.Initialize(divId);
-			
-			jasmine.Clock.tick(101);
+			//subject.TimerEvent();
+			jasmine.Clock.tick(201);
 		});
 		
-		it("listens for timer events", function(){	
-			expect(subject.TimerEvent.callCount).toEqual(1);
+		it("instructs board to create new falling object", function() {
+			expect(board.CreateNewFallingObject.callCount).toEqual(2);
+		});
+		
+		it("updates board view", function() {
+			expect(view.Update.callCount).toEqual(3);//Once in initialize then every 100 miliseconds
 		});
 	});
 });

@@ -37,4 +37,25 @@ describe("GameBoard", function() {
 		
 		expect(object.Position).toEqual(0);
 	});
+	
+	it("creates new falling object", function(){
+		var subject = new GameBoard();
+		
+		var name = subject.CreateNewFallingObject();
+		
+		expect(subject.GetObjectsOnBoard()[name]).not.toBe(undefined);
+		expect(subject.GetObjectsOnBoard()[name]._view).not.toBe(undefined);
+	});
+	
+	it("creates new falling object with different location each", function(){
+		var subject = new GameBoard();
+		
+		var obj1Id = subject.CreateNewFallingObject();
+		var obj2Id = subject.CreateNewFallingObject();
+		
+		expect(obj1Id).not.toBe(obj2Id);
+		var obj1Position = subject.GetObjectsOnBoard()[obj1Id].Position
+		var obj2Position = subject.GetObjectsOnBoard()[obj2Id].Position
+		expect(obj1Position).not.toBe(obj2Position);
+	});
 });

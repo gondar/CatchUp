@@ -17,8 +17,9 @@
 		var board = new GameBoard();
 		var view = new GameView(board);
 		var player = new GameObject(new RectangleView());
+		var gameSpeed = 1000;
 		player.Position = 15;
-		var game = new GameController(view, board, player);
+		var game = new GameController(view, board, player, gameSpeed);
 		game.Initialize("#Game");
 	});
   </script>

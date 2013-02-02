@@ -29,4 +29,14 @@ GameBoard.prototype._Move = function(name, direction){
 }
 
 GameBoard.prototype.CreateNewFallingObject = function(){
+	var name = "one"+this._GetRandom(100);
+	var object = new GameObject(new RectangleView());
+	object.Position = this._GetRandom(20);
+	console&&console.log(object.Position);
+	this.elements[name] = object;
+	return name;
+}
+
+GameBoard.prototype._GetRandom = function(max) {
+	return Math.floor((Math.random()*max)); 
 }

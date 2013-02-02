@@ -88,12 +88,12 @@ describe("GameController", function(){
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
 			board = jasmine.createSpyObj("GameBoard",["Add", "CreateNewFallingObject"]);
 			player = {Id:12};
-			subject = new GameController(view, board, player);
+			var gameSpeed = 100;
+			subject = new GameController(view, board, player, gameSpeed);
 			divId = "#id";
 		
 			subject.Initialize(divId);
-			//subject.TimerEvent();
-			jasmine.Clock.tick(201);
+			jasmine.Clock.tick(gameSpeed*2+1);
 		});
 		
 		it("instructs board to create new falling object", function() {

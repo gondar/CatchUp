@@ -11,7 +11,6 @@ function RectangleView(){
 RectangleView.prototype.SetModel = function(model){
 		this.model = model;
 		this.Update();
-
 }
 
 RectangleView.prototype.Update = function(){

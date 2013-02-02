@@ -1,9 +1,9 @@
-function GameController(view, gameBoard, player){
+function GameController(view, gameBoard, player, speed){
 	this._board = gameBoard;
 	this._player = player;
 	this._boardView = view;
+	this._gameSpeed = speed;
 }
-
 
 GameController.prototype.TimerEvent = function() {
 	this._board.CreateNewFallingObject();
@@ -14,7 +14,7 @@ GameController.prototype.Initialize = function(gameDivId) {
 	var controller = this;
 	setInterval(function() {
       controller.TimerEvent();
-    }, 100);
+    }, this._gameSpeed);
 	this._board.Add("player",this._player);
 	this._boardView.CreateFabricInDiv(gameDivId);
 	this._boardView.AddKeypressListeners(this);

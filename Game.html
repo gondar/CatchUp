@@ -12,15 +12,10 @@
   <script type="text/javascript" src="src/GameView.js"></script>  
   <script type="text/javascript" src="src/RectangleView.js"></script>
   <script type="text/javascript" src="src/GameController.js"></script>
+  <script type="text/javascript" src="src/GameFactory.js"></script>
   <script type="text/javascript">
   $(function() {
-		var board = new GameBoard();
-		var view = new GameView(board);
-		var player = new GameObject(new RectangleView());
-		var gameSpeed = 1000;
-		player.Position = 15;
-		var game = new GameController(view, board, player, gameSpeed);
-		game.Initialize("#Game");
+		new GameFactory().BuildGame("#Game");
 	});
   </script>
 </head>

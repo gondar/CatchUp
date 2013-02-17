@@ -36,7 +36,7 @@ describe("Game Factory", function() {
 		beforeEach(function() {
 			var subject = new GameFactory();
 			
-			fallingObject = subject.BuildFallingObject();
+			fallingObject = subject.BuildFallingObject(100);
 		});
 				
 		it("Creates a new Game Object", function() {		
@@ -77,16 +77,23 @@ describe("Game Factory", function() {
 	describe("When creating many falling objects", function() {
 		var fallingObject;
 		var secondFallingObject;
+		var boardWidth;
 		
 		beforeEach(function() {
 			var subject = new GameFactory();
+			boardWidth = 100;
 			
-			fallingObject = subject.BuildFallingObject();
-			secondFallingObject = subject.BuildFallingObject();
+			fallingObject = subject.BuildFallingObject(boardWidth);
+			secondFallingObject = subject.BuildFallingObject(boardWidth);
 		});
 		
 		it("Each has different position", function(){
 			expect(fallingObject.Position).not.toBe(secondFallingObject.Position);
+		});
+		
+		it("The x position is never outside of board", function(){
+			expect(fallingObject.Position.x).not.toBeGreaterThan(boardWidth);
+			expect(secondFallingObject.Position.x).not.toBeGreaterThan(boardWidth);
 		});
 	});
 });

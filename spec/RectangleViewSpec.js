@@ -1,39 +1,50 @@
 describe("RectangleView", function(){
-	it("creates fabric object", function(){
-		var subject = new RectangleView();
+	var view;
+	beforeEach(function(){
+		view = new RectangleView();
+	});
+	describe("when rendering element is requested", function(){
+		var fabric;
 		
-		var fabric = subject.GetFabric()
+		beforeEach(function(){			
+			fabric = view.GetFabric()
+		});
 		
-		expect(fabric).not.toBe(undefined);
+		it("it returns base fabric object", function(){
+			expect(fabric).not.toBe(undefined);
+		});
 	});
 	
-	it("Sets default value to current model state", function(){
-		var model = {
-			Position: 1,
-			GetPosition: function() {
-				return Position;
-			}
-		};		
-		var subject = new RectangleView();
-		
-		subject.SetModel(model);
-		
-		expect(subject.GetFabric().left).toBe(10*model.Position);
-	});
+	describe("model-view consistency",function(){
+		var model;	
+
+		beforeEach(function(){
+			model = {
+				Position: 1,
+				GetPosition: function() {
+					return Position;
+				}
+			};
 	
-	it("Updates its position according to model position",function(){
-		var model = {
-			Position: 1,
-			GetPosition: function() {
-				return Position;
-			}
-		};
-		var subject = new RectangleView();
-		subject.SetModel(model);
-		model.Position = 100;
+			view.SetModel(model);
+		});
+	
+		describe("when first setting model", function(){
+			it("it updates current position according to model position",function(){
+				expect(view.GetFabric().left).toBe(10*model.Position);
+			});
+		});
 		
-		subject.Update();
+		describe("when update is requested",function(){
+			beforeEach(function(){
+				model.Position = 100;
 		
-		expect(subject.GetFabric().left).toBe(10*model.Position);
+				view.Update();
+			});
+			
+			it("updates fabric position", function(){
+				expect(view.GetFabric().left).toBe(10*model.Position);
+			});
+		});
 	});
 });

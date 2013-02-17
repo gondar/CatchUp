@@ -6,7 +6,7 @@ describe("Game", function(){
 		beforeEach(function() {
 			board = jasmine.createSpyObj("GameBoard",["Add"]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
-			var subject = new Game(board, factory);
+			var subject = new Game(board, factory,10);
 		
 			subject.RoundFinished();
 		});
@@ -39,7 +39,10 @@ describe("Game", function(){
 		it("creates unique name for each object", function(){
 			expect(board.Add.calls[0].args[0]).toBe("FallingObject0");
 			expect(board.Add.calls[1].args[0]).toBe("FallingObject1");
-			expect(board.Add.calls[2].args[0]).toBe("FallingObject2");
+		});
+		
+		it("limits number of falling objects on board", function(){
+			expect(factory.BuildFallingObject.callCount).toBe(2);
 		});
 	});
 });

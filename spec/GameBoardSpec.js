@@ -23,21 +23,21 @@ describe("GameBoard", function() {
 	
 	it("allows to move object right", function(){
 		var subject = new GameBoard();
-		var object = {"Name": "test", "Position": 0};
+		var object = {"Name": "test", "Position": {x:0,y:0}};
 		subject.Add(object.Name, object);
 		
 		subject.MoveRight(object.Name);
 		
-		expect(object.Position).toEqual(1);
+		expect(object.Position).toEqual({x:1,y:0});
 	});
 	
 	it("allows to move object left", function(){
 		var subject = new GameBoard();
-		var object = {"Name": "test", "Position": 1};
+		var object = {"Name": "test", "Position": {x:1,y:0}};
 		subject.Add(object.Name, object);
 		
 		subject.MoveLeft(object.Name);
 		
-		expect(object.Position).toEqual(0);
+		expect(object.Position).toEqual({x:0,y:0});
 	});
 });

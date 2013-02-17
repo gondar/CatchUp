@@ -52,7 +52,7 @@ describe("Game Factory", function() {
 		});
 	});
 	
-	describe("When creating a new user", function() {
+	describe("When creating a new player", function() {
 		var player;
 		beforeEach(function() {
 			var subject = new GameFactory();
@@ -65,7 +65,8 @@ describe("Game Factory", function() {
 		});
 		
 		it("Sets properly it's position", function(){
-			expect(player.Position).toBe(15);
+			expect(player.Position.x).toBe(15);
+			expect(player.Position.y).not.toBe(undefined);
 		});
 		
 		it("Makes it as rectangle", function(){

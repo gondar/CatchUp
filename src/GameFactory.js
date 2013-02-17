@@ -1,9 +1,9 @@
 function GameFactory() {
 }
 
-GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 1000) {
+GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 1000, width = 400, height=400) {
 	var board = new GameBoard();
-	var view = new GameView(board);
+	var view = new GameView(board, width, height);
 	var player = this.BuildPlayer();
 	var game = new Game(board, this, 2);
 	var controller = new GameController(view, board, player, gameSpeed, game);
@@ -12,16 +12,16 @@ GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 1000) {
 }
 
 GameFactory.prototype.BuildPlayer = function() {
-	return this._BuildGameObjectWithRectangleView(15);
+	return this._BuildGameObjectWithRectangleView(15,100);
 }
 
 GameFactory.prototype.BuildFallingObject = function() {
-	return this._BuildGameObjectWithRectangleView(this._GetRandom(20));
+	return this._BuildGameObjectWithRectangleView(this._GetRandom(20,50));
 }
 
-GameFactory.prototype._BuildGameObjectWithRectangleView = function(position) {
+GameFactory.prototype._BuildGameObjectWithRectangleView = function(x,y) {
 	var gameObject = new GameObject(new RectangleView());
-	gameObject.Position = position
+	gameObject.Position = {x:x,y:y};
 	return gameObject;
 }
 

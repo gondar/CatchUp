@@ -23,7 +23,7 @@ GameBoard.prototype.MoveLeft = function(name) {
 }
 
 GameBoard.prototype._Move = function(name, direction){
-	var currentPosition = this.elements[name].Position;
+	var currentPosition = this.elements[name].Position.x;
 	var newPosition = currentPosition + direction;
-	this.elements[name].Position = newPosition;
+	this.elements[name].Position.x = newPosition;
 }

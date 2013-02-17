@@ -1,12 +1,14 @@
 describe("GameView", function(){
 	it("creates fabric", function(){
 		setFixtures("<div id='myid'></div>");
-		var subject = new GameView();
+		var subject = new GameView(null,100,200);
 		
 		subject.CreateFabricInDiv("#myid");
 		
 		expect($("#myid")).not.toBeEmpty();
 		expect(subject._canvas).not.toBe(undefined);
+		expect(subject._canvas.getWidth()).toBe(100);
+		expect(subject._canvas.getHeight()).toBe(200);
 	});
 	
 	it("listens for the left keyboard press", function(){	

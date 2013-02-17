@@ -22,7 +22,7 @@ describe("RectangleView", function(){
 
 		beforeEach(function(){
 			model = {
-				Position: 1,
+				Position: {x:1,y:10},
 				GetPosition: function() {
 					return Position;
 				}
@@ -33,19 +33,21 @@ describe("RectangleView", function(){
 	
 		describe("when first setting model", function(){
 			it("it updates current position according to model position",function(){
-				expect(view.GetFabric().left).toBe(10*model.Position);
+				expect(view.GetFabric().left).toBe(10*model.Position.x);
+				expect(view.GetFabric().top).toBe(model.Position.y);
 			});
 		});
 		
 		describe("when update is requested",function(){
 			beforeEach(function(){
-				model.Position = 100;
+				model.Position = {x:10,y:20};
 		
 				view.Update();
 			});
 			
 			it("updates fabric position", function(){
-				expect(view.GetFabric().left).toBe(10*model.Position);
+				expect(view.GetFabric().left).toBe(10*model.Position.x);
+				expect(view.GetFabric().top).toBe(model.Position.y);
 			});
 		});
 	});

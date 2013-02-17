@@ -1,7 +1,9 @@
-function GameView(gameBoard){
+function GameView(gameBoard,width=200,height=200){
 	this.gameBoard = gameBoard;
 	this.canvasId = "GameCanvas";
 	this._elementsOnBoard = {};
+	this._width = width;
+	this._height = height;
 }
 
 GameView.prototype.KEYBOARD_LEFT = 37;
@@ -17,6 +19,8 @@ GameView.prototype._add = function(name, element) {
 GameView.prototype.CreateFabricInDiv = function(id){
 	$("<canvas id='"+this.canvasId+"'></canvas>").appendTo(id)
 	this._canvas = new fabric.Canvas(this.canvasId);
+	this._canvas.setWidth(this._width);
+	this._canvas.setHeight(this._height);
 }
 
 GameView.prototype.AddKeypressListeners = function(controller) {

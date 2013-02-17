@@ -9,11 +9,15 @@ describe("GameObject", function(){
 
 	describe("When setting object position",function(){
 		beforeEach(function(){
-			subject.Position = 5;
+			subject.Position = {x: 10, y: 25};
 		});
 		
-		it("it is changed",function(){
-			expect(subject.Position).toBe(5);
+		it("it changed x value",function(){
+			expect(subject.Position.x).toBe(10);
+		});
+		
+		it("it changed y value",function(){
+			expect(subject.Position.y).toBe(25);
 		});
 	});
 	

@@ -25,5 +25,6 @@ GameBoard.prototype.MoveLeft = function(name) {
 GameBoard.prototype._Move = function(name, direction){
 	var currentPosition = this.elements[name].Position.x;
 	var newPosition = currentPosition + direction;
+	console&&console.log("Move to: "+newPosition);
 	this.elements[name].Position.x = newPosition;
 }

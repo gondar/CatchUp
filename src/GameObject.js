@@ -1,5 +1,5 @@
 function GameObject(view){
-	this.Position = 0;
+	this.Position = {x:0,y:0};
 	this._view = view;
 	view.SetModel(this);
 }

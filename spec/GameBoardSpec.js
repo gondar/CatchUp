@@ -10,12 +10,15 @@ describe("GameBoard", function() {
 	
 	it("exposes all elements on a board", function() {
 		var subject = new GameBoard();
-		var object = {"name":"ObjectName"};
-		subject.Add(object.name, object);
+		var object1 = {"name":"Object1"};
+		var object2 = {"name":"Object2"};
+		subject.Add(object1.name, object1);
+		subject.Add(object2.name, object2);
 		
 		var objects = subject.GetObjectsOnBoard();
 		
-		expect(objects["name"]).toEqual(object);
+		expect(objects["Object1"]).toEqual(object1);
+		expect(objects["Object2"]).toEqual(object2);
 	});
 	
 	it("allows to move object right", function(){
@@ -36,26 +39,5 @@ describe("GameBoard", function() {
 		subject.MoveLeft(object.Name);
 		
 		expect(object.Position).toEqual(0);
-	});
-	
-	it("creates new falling object", function(){
-		var subject = new GameBoard();
-		
-		var name = subject.CreateNewFallingObject();
-		
-		expect(subject.GetObjectsOnBoard()[name]).not.toBe(undefined);
-		expect(subject.GetObjectsOnBoard()[name]._view).not.toBe(undefined);
-	});
-	
-	it("creates new falling object with different location each", function(){
-		var subject = new GameBoard();
-		
-		var obj1Id = subject.CreateNewFallingObject();
-		var obj2Id = subject.CreateNewFallingObject();
-		
-		expect(obj1Id).not.toBe(obj2Id);
-		var obj1Position = subject.GetObjectsOnBoard()[obj1Id].Position
-		var obj2Position = subject.GetObjectsOnBoard()[obj2Id].Position
-		expect(obj1Position).not.toBe(obj2Position);
 	});
 });

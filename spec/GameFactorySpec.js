@@ -3,7 +3,7 @@ describe("Game Factory", function() {
 		var game;
 		beforeEach(function() {
 			var subject = new GameFactory();
-			var gameSpy = jasmine.createSpyObj("GameController",["Initialize"]);
+			var  gameSpy = jasmine.createSpyObj("GameController",["Initialize"]);
 			spyOn(window,"GameController").andReturn(gameSpy);
 			
 			game = subject.BuildGame();
@@ -26,6 +26,28 @@ describe("Game Factory", function() {
 		});
 	});
 	
+	describe("When creating a new falling object", function() {
+		var fallingObject;
+		
+		beforeEach(function() {
+			var subject = new GameFactory();
+			
+			fallingObject = subject.BuildFallingObject();
+		});
+				
+		it("Creates a new Game Object", function() {		
+			expect(fallingObject instanceof GameObject).toBe(true);
+		});
+		
+		it("Sets properly it's position", function(){
+			expect(fallingObject.Position).not.toBe(undefined);
+		});
+		
+		it("Makes it as rectangle", function(){
+			expect(fallingObject.GetView() instanceof RectangleView).toBe(true);
+		});
+	});
+	
 	describe("When creating a new user", function() {
 		var player;
 		beforeEach(function() {
@@ -44,6 +66,22 @@ describe("Game Factory", function() {
 		
 		it("Makes it as rectangle", function(){
 			expect(player.GetView() instanceof RectangleView).toBe(true);
+		});
+	});
+	
+	describe("When creating many falling objects", function() {
+		var fallingObject;
+		var secondFallingObject;
+		
+		beforeEach(function() {
+			var subject = new GameFactory();
+			
+			fallingObject = subject.BuildFallingObject();
+			secondFallingObject = subject.BuildFallingObject();
+		});
+		
+		it("Each has different position", function(){
+			expect(fallingObject.Position).not.toBe(secondFallingObject.Position);
 		});
 	});
 });

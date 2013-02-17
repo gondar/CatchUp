@@ -96,8 +96,8 @@ describe("GameController", function(){
 			jasmine.Clock.tick(gameSpeed*2+1);
 		});
 		
-		it("instructs board to create new falling object", function() {
-			expect(board.CreateNewFallingObject.callCount).toEqual(2);
+		it("adds falling object to the board", function() {
+			expect(board.Add.callCount).toEqual(3); //1player+2falling objects
 		});
 		
 		it("updates board view", function() {

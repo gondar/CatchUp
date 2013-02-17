@@ -19,5 +19,6 @@
         <File name="spec\GameObjectSpec.js" />
         <File name="spec\GameViewSpec.js" />
         <File name="spec\RectangleViewSpec.js" />
+        <File name="spec\GameFactorySpec.js" />
     </Project>
 </NotepadPlus>

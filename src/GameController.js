@@ -1,17 +1,13 @@
-function GameController(view, gameBoard, player, speed){
+function GameController(view, gameBoard, player, speed, game){
 	this._board = gameBoard;
 	this._player = player;
 	this._boardView = view;
 	this._gameSpeed = speed;
-	this._fallingObjectsIndex = 0;
-	this._gameFactory = new GameFactory();
+	this._game = game;
 }
 
 GameController.prototype.TimerEvent = function() {
-	var name = "fallingObject"+this._fallingObjectsIndex;
-	this._fallingObjectsIndex++;
-	var object = this._gameFactory.BuildFallingObject();
-	this._board.Add(name,object);
+	this._game.RoundFinished();
 	this._boardView.Update();
 }
 

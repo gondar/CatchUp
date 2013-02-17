@@ -77,30 +77,32 @@ describe("GameController", function(){
 		});
 	});
 	
-	describe("It receives timer event every 100 miliseconds", function() {
+	describe("When receives timer event every 100 miliseconds", function() {
 		var view;
 		var board;
 		var player;
 		var subject;
+		var game;
 		
 		beforeEach(function() {
 			jasmine.Clock.useMock();
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
-			board = jasmine.createSpyObj("GameBoard",["Add", "CreateNewFallingObject"]);
+			board = jasmine.createSpyObj("GameBoard",["Add"]);
+			game = jasmine.createSpyObj("Game",["RoundFinished"]);
 			player = {Id:12};
 			var gameSpeed = 100;
-			subject = new GameController(view, board, player, gameSpeed);
+			subject = new GameController(view, board, player, gameSpeed, game);
 			divId = "#id";
 		
 			subject.Initialize(divId);
 			jasmine.Clock.tick(gameSpeed*2+1);
 		});
 		
-		it("adds falling object to the board", function() {
-			expect(board.Add.callCount).toEqual(3); //1player+2falling objects
+		it("it informs game that round has elapsed", function() {
+			expect(game.RoundFinished.callCount).toEqual(2);
 		});
 		
-		it("updates board view", function() {
+		it("it updates board view", function() {
 			expect(view.Update.callCount).toEqual(3);//Once in initialize then every 100 miliseconds
 		});
 	});

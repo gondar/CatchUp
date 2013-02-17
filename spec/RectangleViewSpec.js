@@ -1,8 +1,10 @@
 describe("RectangleView", function(){
 	var view;
+	
 	beforeEach(function(){
 		view = new RectangleView();
 	});
+	
 	describe("when rendering element is requested", function(){
 		var fabric;
 		

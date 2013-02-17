@@ -1,19 +1,29 @@
 describe("GameObject", function(){
-	it("contains current position", function(){
-		var view = {SetModel: function(model){}};
-		var subject = new GameObject(view);
+	var subject;
+	var view;
+
+	beforeEach(function(){
+		view = jasmine.createSpyObj("View",["SetModel"]);
+		subject = new GameObject(view);
+	});
+
+	describe("When setting object position",function(){
+		beforeEach(function(){
+			subject.Position = 5;
+		});
 		
-		subject.Position = 5;
-		
-		expect(subject.Position).toBe(5);
+		it("it is changed",function(){
+			expect(subject.Position).toBe(5);
+		});
 	});
 	
-	it("contains its own view", function(){
-		var view = {SetModel: function(model){}};
-		var subject = new GameObject(view);
+	describe("when getting accessing object view",function(){
+		beforeEach(function(){	 
+			result = subject.GetView();
+		});
 		
-		var result = subject.GetView();
-		
-		expect(result).toBe(view)
+		it("returns view",function(){
+			expect(result).toBe(view)
+		});
 	});
 });

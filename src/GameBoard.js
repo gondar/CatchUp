@@ -14,6 +14,14 @@ GameBoard.prototype.GetObjectsOnBoard = function() {
 	return this.elements;
 }
 
+GameBoard.prototype.MoveDownFallingObjects = function(name) {
+	for (var key in this.elements) {
+		if(key.indexOf(name)!=-1) {
+			this.elements[key].Position.y = this.elements[key].Position.y+5;
+		}
+	}
+}
+
 GameBoard.prototype.MoveRight = function(name) {
 	this._Move(name, 1);
 }

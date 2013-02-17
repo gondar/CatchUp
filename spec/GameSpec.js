@@ -4,7 +4,7 @@ describe("Game", function(){
 		var board;
 		
 		beforeEach(function() {
-			board = jasmine.createSpyObj("GameBoard",["Add"]);
+			board = jasmine.createSpyObj("GameBoard",["Add","MoveDownFallingObjects"]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var subject = new Game(board, factory,10);
 		
@@ -18,6 +18,10 @@ describe("Game", function(){
 		it("adds a new falling object on board", function(){	
 			expect(board.Add).toHaveBeenCalled();
 		});
+		
+		it("progresses fall of the objects", function(){
+			expect(board.MoveDownFallingObjects).toHaveBeenCalled();
+		});
 	});
 	
 	describe("When many rounds has passed", function() {
@@ -26,7 +30,7 @@ describe("Game", function(){
 		var fallingObjectsLimit;
 		
 		beforeEach(function() {
-			board = jasmine.createSpyObj("GameBoard",["Add"]);
+			board = jasmine.createSpyObj("GameBoard",["Add","MoveDownFallingObjects"]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			fallingObjectsLimit = 2;
 			var subject = new Game(board, factory, fallingObjectsLimit);

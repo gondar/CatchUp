@@ -9,6 +9,7 @@ function Game(board, factory, limit, width, height){
 }
 
 Game.prototype.RoundFinished = function(){
+	this._board.MoveDownFallingObjects("FallingObject");
 	if (this._fallingObjectCount == this._limit)
 		return;
 		

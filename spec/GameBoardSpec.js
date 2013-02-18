@@ -1,17 +1,20 @@
 describe("GameBoard", function() {
 	describe("refactored tests", function(){
+		var board;
+		beforeEach(function(){
+			board = new GameBoard();
+		});
 		describe("When requested to progress falling objects", function(){
 			var object1;
 			var object2;
 			
 			beforeEach(function(){
-				var subject = new GameBoard();
 				object1 = {name:"FallingTestObject", Position:{x:10,y:10}};
 				object2 = {name:"TestObject", Position:{x:10,y:10}};
-				subject.Add(object1.name,object1);
-				subject.Add(object2.name,object2);
+				board.Add(object1.name,object1);
+				board.Add(object2.name,object2);
 				
-				subject.MoveDownFallingObjects("Falling");
+				board.MoveDownFallingObjects("Falling");
 			});
 			
 			it("moves falling object down", function(){
@@ -24,17 +27,21 @@ describe("GameBoard", function() {
 				expect(object2.Position.y).toBe(10);
 			});
 		});
-	});
-	it("adds elements to a board", function(){
-		var subject = new GameBoard();
-		var object = {"name":"ObjectName"};
 		
-		subject.Add(object.name, object);
+		describe("When added element to a board", function(){
+			var object;
+			
+			beforeEach(function(){
+				object = {name:"ObjectName"};
 		
-		expect(subject.Get(object.name)).toEqual(object);
-	});
-	
-	
+				board.Add(object.name, object);				
+			});
+			
+			it("allows to obtain it back",function(){
+				expect(board.Get(object.name)).toEqual(object);
+			});
+		})
+	});	
 	
 	it("exposes all elements on a board", function() {
 		var subject = new GameBoard();

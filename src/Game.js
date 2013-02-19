@@ -10,14 +10,14 @@ function Game(board, factory, limit, width, height){
 
 Game.prototype.RoundFinished = function(){
 	var fallingObjectString = "FallingObject";
-	this._board.MoveDownFallingObjects(fallingObjectString);
-	this._addFallingObject(fallingObjectString);
+	var removedObjects = this._board.MoveDownFallingObjects(fallingObjectString);
+	//console&&console.log("Removed: "+JSON.stringify(removedObjects));
+	this._fallingObjectCount = this._fallingObjectCount - removedObjects.length;
+	if (this._fallingObjectCount < this._limit)
+		this._addFallingObject(fallingObjectString);
 }
 
-Game.prototype._addFallingObject = function(fallingObjectString){
-	if (this._fallingObjectCount == this._limit)
-		return;
-		
+Game.prototype._addFallingObject = function(fallingObjectString){	
 	this._fallingObjectCount++;
 	var name = fallingObjectString+this._fallingObjectIndex++;
 	var fallingObject = this._factory.BuildFallingObject(this._width);

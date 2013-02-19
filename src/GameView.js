@@ -10,10 +10,11 @@ GameView.prototype.KEYBOARD_LEFT = 37;
 GameView.prototype.KEYBOARD_RIGHT = 39;
 
 GameView.prototype._add = function(name, element) {
-	if (this._elementsOnBoard[name] != true) {
-		this._elementsOnBoard[name] = true;
-		this._canvas.add(element.GetFabric());
-	}
+	if (name in this._elementsOnBoard)
+		return;
+	var fabric = element.GetFabric();
+	this._elementsOnBoard[name] = fabric;
+	this._canvas.add(fabric);
 }
 
 GameView.prototype.CreateFabricInDiv = function(id){
@@ -43,11 +44,16 @@ GameView.prototype.Update = function() {
 		this._add(key, view);
 		view.Update();
 	}
+	for (var key in this._elementsOnBoard) {
+		if (key in elements) 
+			continue;
+		this._canvas.remove(this._elementsOnBoard[key]);
+		delete this._elementsOnBoard[key];		
+	}
 	this._canvas.renderAll();
 }
 
 GameView.prototype.MockCreateRectangle = function(){
-// create a rectangle object
 var rect = new fabric.Rect({
   left: 100,
   top: 100,
@@ -56,7 +62,5 @@ var rect = new fabric.Rect({
   height: 20
 });
 
-// "add" rectangle onto canvas
 this._canvas.add(rect);
-
 }

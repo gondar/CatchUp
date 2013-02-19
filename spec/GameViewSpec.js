@@ -68,6 +68,33 @@ describe("GameView", function(){
 		expect(subject._canvas.getObjects().length).toBe(1);
 	});
 	
+	it("removes elements which are removed from model",function(){
+		var board = {
+					MockRemoveAll: false,
+					GetObjectsOnBoard: function() {
+						if (this.MockRemoveAll)
+							return {};
+						return {
+							"player": {
+								GetView: function() {
+									return mockPlayerView(); 
+							}
+						}
+					}
+				}
+			};
+		var controller = null;
+		var subject = new GameView(board, controller);
+		setFixtures("<div id='myid'></div>");		
+		subject.CreateFabricInDiv("#myid");
+		
+		subject.Update();
+		board.MockRemoveAll = true;
+		subject.Update();
+		
+		expect(subject._canvas.getObjects().length).toBe(0);
+	});
+	
 	it("updates each element on board view", function(){
 		var board = mockGameBoardWithPlayerOnly();
 		var controller = null;

@@ -2,19 +2,23 @@ describe("GameBoard", function() {
 	describe("refactored tests", function(){
 		var board;
 		beforeEach(function(){
-			board = new GameBoard();
+			board = new GameBoard(100, 20);
 		});
 		describe("When requested to progress falling objects", function(){
 			var object1;
 			var object2;
+			var object3;
+			var outcome;
 			
 			beforeEach(function(){
 				object1 = {name:"FallingTestObject", Position:{x:10,y:10}};
 				object2 = {name:"TestObject", Position:{x:10,y:10}};
+				object3 = {name:"FallingObjectNearLowerBorder", Position:{x:10,y:20}};
 				board.Add(object1.name,object1);
 				board.Add(object2.name,object2);
+				board.Add(object3.name,object3);
 				
-				board.MoveDownFallingObjects("Falling");
+				outcome = board.MoveDownFallingObjects("Falling");
 			});
 			
 			it("moves falling object down", function(){
@@ -25,6 +29,14 @@ describe("GameBoard", function() {
 			it("leaves not falling objects on the same position", function(){
 				expect(object2.Position.x).toBe(10);
 				expect(object2.Position.y).toBe(10);
+			});
+			
+			it("returns a list of removed objects",function(){
+				expect(outcome[0]).toBe(object3);
+			});
+			
+			it("removes objects under border from board",function(){
+				expect(board.Get(object3.name)).toBe(undefined);
 			});
 		});
 		

@@ -1,5 +1,7 @@
-function GameBoard(){
+function GameBoard(width, height){
 	this.elements = {};
+	this._width = width;
+	this._height = height;
 }
 
 GameBoard.prototype.Add = function(name, object){
@@ -15,11 +17,22 @@ GameBoard.prototype.GetObjectsOnBoard = function() {
 }
 
 GameBoard.prototype.MoveDownFallingObjects = function(name) {
+	var removed = [];
 	for (var key in this.elements) {
 		if(key.indexOf(name)!=-1) {
-			this.elements[key].Position.y = this.elements[key].Position.y+5;
+			var element = this.elements[key];
+			element.Position.y = element.Position.y+5;
+			if(element.Position.y >= this._height){
+				this.Remove(key);
+				removed.push(element);
+			}
 		}
 	}
+	return removed;
+}
+
+GameBoard.prototype.Remove = function(name) {
+	delete this.elements[name];
 }
 
 GameBoard.prototype.MoveRight = function(name) {

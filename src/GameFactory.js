@@ -1,8 +1,8 @@
 function GameFactory() {
 }
 
-GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 1000, width = 400, height=400) {
-	var board = new GameBoard();
+GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 100, width = 400, height=180) {
+	var board = new GameBoard(width/10, height);
 	var view = new GameView(board, width, height);
 	var player = this.BuildPlayer();
 	var game = new Game(board, this, 2, width/10, height);

@@ -53,6 +53,29 @@ describe("GameBoard", function() {
 				expect(board.Get(object.name)).toEqual(object);
 			});
 		})
+		
+		describe("Finding collisions",function(){
+			describe("When requested list of all collisions for a given object", function(){
+				var outcome;
+				
+				beforeEach(function(){
+					var object1 = {name:"Object1", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
+					var object2 = {name:"Object2", Position:{x:15, y:10}, Dimensions: {Width:10,Height:10}};
+					board.Add(object1.name, object1);
+					board.Add(object2.name, object2);
+				
+					outcome = board.GetCollisions("Object1")
+				});
+				
+				it("has only one collision",function(){
+					expect(outcome.length).toBe(1);
+				});
+			
+				it("finds all collisions",function(){
+					expect(outcome[0]).toBe("Object2");
+				});
+			});
+		});
 	});	
 	
 	it("exposes all elements on a board", function() {

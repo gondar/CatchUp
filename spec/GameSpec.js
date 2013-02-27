@@ -4,7 +4,7 @@ describe("Game", function(){
 		var board;
 		
 		beforeEach(function() {
-			board = = buildBoard([]);
+			board = buildBoard([]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var subject = new Game(board, factory,10);
 		
@@ -68,13 +68,15 @@ describe("Game", function(){
 		it("it adds a new object for a fallen one", function(){
 			expect(factory.BuildFallingObject.callCount).toBe(1);
 		});
-	});
-	
+	});	
+});
+
 	function buildBoard(result){
-		board = {
+		var board = {
 			Add:function(){},
 			MoveDownFallingObjects:function(){}
 		};
 		spyOn(board, 'MoveDownFallingObjects').andReturn(result);
+		spyOn(board, 'Add').andReturn(result);
+		return board;
 	}
-});

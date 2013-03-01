@@ -4,7 +4,7 @@ describe("Game", function(){
 		var board;
 		
 		beforeEach(function() {
-			board = buildBoard([]);
+			board = buildBoard([],[]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var subject = new Game(board, factory,10);
 		
@@ -22,6 +22,10 @@ describe("Game", function(){
 		it("progresses fall of the objects", function(){
 			expect(board.MoveDownFallingObjects).toHaveBeenCalled();
 		});
+		
+		it("verifies collisions",function(){
+			expect(board.GetCollisions).toHaveBeenCalled();
+		});
 	});
 	
 	describe("When passed more rounds than limit of falling objects", function() {
@@ -30,7 +34,7 @@ describe("Game", function(){
 		var fallingObjectsLimit;
 		
 		beforeEach(function() {
-			board = buildBoard([]);
+			board = buildBoard([],[]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			fallingObjectsLimit = 2;
 			var subject = new Game(board, factory, fallingObjectsLimit);
@@ -56,7 +60,7 @@ describe("Game", function(){
 		var fallingObjectsLimit;
 		
 		beforeEach(function() {
-			board = buildBoard([{name:"removedObject"}]);
+			board = buildBoard([{name:"removedObject"}],[]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			fallingObjectsLimit = 1;
 			var subject = new Game(board, factory, fallingObjectsLimit);
@@ -69,14 +73,41 @@ describe("Game", function(){
 			expect(factory.BuildFallingObject.callCount).toBe(1);
 		});
 	});	
+	
+	describe("When found collision with player", function(){
+		var subject;
+		var player;
+		var currentColor;
+		beforeEach(function(){
+			currentColor = ''
+			player = {Color:currentColor};
+			var board = buildBoard([],["collision1object"],player);
+			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
+			var fallingObjectLimit = 10;
+			subject = new Game(board, factory, 10, 200, 200,"player");
+		});
+		
+		it("changes player color for every collision",function(){
+			for (var i=0;i<10;i++)
+			{
+				subject.RoundFinished();			
+				expect(player.Color).not.toBe(currentColor);
+				currentColor = player.Color;
+			}
+		});
+	});
 });
 
-	function buildBoard(result){
+	function buildBoard(result,collisions,player){
 		var board = {
 			Add:function(){},
-			MoveDownFallingObjects:function(){}
+			MoveDownFallingObjects:function(){},
+			GetCollisions:function(){},
+			Get:function(){}
 		};
 		spyOn(board, 'MoveDownFallingObjects').andReturn(result);
 		spyOn(board, 'Add').andReturn(result);
+		spyOn(board, 'GetCollisions').andReturn(collisions);
+		spyOn(board, 'Get').andReturn(player);
 		return board;
 	}

@@ -1,9 +1,6 @@
 describe("GameBoard", function() {
 	describe("refactored tests", function(){
 		var board;
-		beforeEach(function(){
-			board = new GameBoard(100, 20);
-		});
 		describe("When requested to progress falling objects", function(){
 			var object1;
 			var object2;
@@ -11,6 +8,7 @@ describe("GameBoard", function() {
 			var outcome;
 			
 			beforeEach(function(){
+				board = new GameBoard(100, 20);
 				object1 = {name:"FallingTestObject", Position:{x:10,y:10}};
 				object2 = {name:"TestObject", Position:{x:10,y:10}};
 				object3 = {name:"FallingObjectNearLowerBorder", Position:{x:10,y:20}};
@@ -44,6 +42,7 @@ describe("GameBoard", function() {
 			var object;
 			
 			beforeEach(function(){
+				board = new GameBoard(100, 20);
 				object = {name:"ObjectName"};
 		
 				board.Add(object.name, object);				
@@ -59,6 +58,8 @@ describe("GameBoard", function() {
 				var outcome;
 				
 				beforeEach(function(){
+					var collisionDetector = {IsCollision:function(){return true;}}
+					board = new GameBoard(100, 20, collisionDetector);
 					var object1 = {name:"Object1", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
 					var object2 = {name:"Object2", Position:{x:15, y:10}, Dimensions: {Width:10,Height:10}};
 					board.Add(object1.name, object1);
@@ -73,6 +74,25 @@ describe("GameBoard", function() {
 			
 				it("finds all collisions",function(){
 					expect(outcome[0]).toBe("Object2");
+				});
+			});
+			
+		describe("When there are no collisions for a given object", function(){
+				var outcome;
+				
+				beforeEach(function(){
+					var collisionDetector = {IsCollision:function(){return false;}}
+					board = new GameBoard(100, 20, collisionDetector);
+					var object1 = {name:"Object1", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
+					var object2 = {name:"Object2", Position:{x:25, y:10}, Dimensions: {Width:10,Height:10}};
+					board.Add(object1.name, object1);
+					board.Add(object2.name, object2);
+				
+					outcome = board.GetCollisions("Object1")
+				});
+				
+				it("returns empty collisions list",function(){
+					expect(outcome.length).toBe(0);
 				});
 			});
 		});

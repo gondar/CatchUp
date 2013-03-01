@@ -21,6 +21,30 @@ describe("GameObject", function(){
 		});
 	});
 	
+	describe("When setting object color",function(){
+		beforeEach(function(){
+			subject.Color ='#00f0f0';
+		});
+		
+		it("it changed color", function(){
+			expect(subject.Color).toBe('#00f0f0');
+		});
+	});
+	
+	describe("When setting object dimension", function(){
+		beforeEach(function(){
+			subject.Dimensions = {Width:10,Height:20};
+		});
+		
+		it("it changes Width",function(){
+			expect(subject.Dimensions.Width).toBe(10);
+		});
+		
+		it("it changes Height",function(){
+			expect(subject.Dimensions.Height).toBe(20);
+		});
+	});
+	
 	describe("when getting accessing object view",function(){
 		beforeEach(function(){	 
 			result = subject.GetView();

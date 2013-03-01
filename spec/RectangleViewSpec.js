@@ -23,6 +23,7 @@ describe("RectangleView", function(){
 		beforeEach(function(){
 			model = {
 				Position: {x:1,y:10},
+				Color: '#000000',
 				GetPosition: function() {
 					return Position;
 				}
@@ -35,6 +36,10 @@ describe("RectangleView", function(){
 			it("it updates current position according to model position",function(){
 				expect(view.GetFabric().left).toBe(10*model.Position.x);
 				expect(view.GetFabric().top).toBe(model.Position.y);
+			});
+			
+			it("updates color",function(){
+				expect(view.GetFabric().fill).toBe(model.Color);
 			});
 		});
 		

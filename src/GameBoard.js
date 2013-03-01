@@ -1,7 +1,8 @@
-function GameBoard(width, height){
+function GameBoard(width, height,collisionDetector){
 	this.elements = {};
 	this._width = width;
 	this._height = height;
+	this._collisionDetector = collisionDetector;
 }
 
 GameBoard.prototype.Add = function(name, object){
@@ -31,10 +32,6 @@ GameBoard.prototype.MoveDownFallingObjects = function(name) {
 	return removed;
 }
 
-GameBoard.prototype.AreColliding = function(object1, object2){
-	return true;
-}
-
 GameBoard.prototype.GetCollisions = function(name) {
 	var object = this.elements[name];
 	var colliding = []
@@ -42,7 +39,8 @@ GameBoard.prototype.GetCollisions = function(name) {
 		if (key == name)
 			continue;
 		var element = this.elements[key];
-		if (this.AreColliding(object,element)) {
+		if (this._collisionDetector.IsCollision(object,element)) {
+			console.log("Collision");
 			colliding.push(key);
 		}
 	}
@@ -64,6 +62,5 @@ GameBoard.prototype.MoveLeft = function(name) {
 GameBoard.prototype._Move = function(name, direction){
 	var currentPosition = this.elements[name].Position.x;
 	var newPosition = currentPosition + direction;
-	console&&console.log("Move to: "+newPosition);
 	this.elements[name].Position.x = newPosition;
 }

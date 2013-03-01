@@ -13,7 +13,7 @@ describe("GameController", function(){
 			subject = new GameController(view, board, player);
 			divId = "#id";
 		
-			subject.Initialize(divId);
+			subject.Initialize(divId,"player");
 		});
 		
 		it("adds player on board", function(){	

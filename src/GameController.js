@@ -11,12 +11,12 @@ GameController.prototype.TimerEvent = function() {
 	this._boardView.Update();
 }
 
-GameController.prototype.Initialize = function(gameDivId) {
+GameController.prototype.Initialize = function(gameDivId, playerName) {
 	var controller = this;
 	setInterval(function() {
       controller.TimerEvent();
     }, this._gameSpeed);
-	this._board.Add("player",this._player);
+	this._board.Add(playerName,this._player);
 	this._boardView.CreateFabricInDiv(gameDivId);
 	this._boardView.AddKeypressListeners(this);
 	this._boardView.Update();

@@ -26,7 +26,7 @@ GameView.prototype.CreateFabricInDiv = function(id){
 
 GameView.prototype.AddKeypressListeners = function(controller) {
 	$(document).keydown({controller: controller}, function(event){
-		console&&console.log(event);
+		//console&&console.log(event);
 		var controller = event.data.controller;
 		if (event.which == GameView.prototype.KEYBOARD_LEFT){
 			controller.MovePlayerLeft();

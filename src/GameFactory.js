@@ -2,12 +2,13 @@ function GameFactory() {
 }
 
 GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 100, width = 400, height=180) {
-	var board = new GameBoard(width/10, height);
+	var board = new GameBoard(width/10, height, new CollisionDetector());
 	var view = new GameView(board, width, height);
 	var player = this.BuildPlayer();
-	var game = new Game(board, this, 2, width/10, height);
+	var playerObjectName = "player";
+	var game = new Game(board, this, 1, width/10, height, playerObjectName);
 	var controller = new GameController(view, board, player, gameSpeed, game);
-	controller.Initialize(gameDiv);
+	controller.Initialize(gameDiv, playerObjectName);
 	return controller;
 }
 
@@ -22,7 +23,6 @@ GameFactory.prototype.BuildFallingObject = function(boardWidth) {
 GameFactory.prototype._BuildGameObjectWithRectangleView = function(x,y) {
 	var gameObject = new GameObject(new RectangleView());
 	gameObject.Position = {x:x,y:y};
-	console&&console.log("New Rectangle: "+JSON.stringify(gameObject.Position));
 	return gameObject;
 }
 

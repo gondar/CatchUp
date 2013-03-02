@@ -2,11 +2,11 @@ function GameFactory() {
 }
 
 GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 100, width = 400, height=180) {
-	var board = new GameBoard(width/10, height, new CollisionDetector());
+	var board = new GameBoard(width, height, new CollisionDetector());
 	var view = new GameView(board, width, height);
 	var player = this.BuildPlayer();
 	var playerObjectName = "player";
-	var game = new Game(board, this, 1, width/10, height, playerObjectName);
+	var game = new Game(board, this, 1, width, height, playerObjectName);
 	var controller = new GameController(view, board, player, gameSpeed, game);
 	controller.Initialize(gameDiv, playerObjectName);
 	return controller;

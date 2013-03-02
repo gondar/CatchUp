@@ -24,35 +24,33 @@ describe("RectangleView", function(){
 			model = {
 				Position: {x:1,y:10},
 				Color: '#000000',
-				GetPosition: function() {
-					return Position;
-				}
+				Dimensions: {Width:100,Height:200}
 			};
 	
 			view.SetModel(model);
 		});
-	
-		describe("when first setting model", function(){
-			it("it updates current position according to model position",function(){
-				expect(view.GetFabric().left).toBe(10*model.Position.x);
+		
+		describe("when update is requested",function(){
+			beforeEach(function(){
+				model.Position = {x:10,y:20};
+				model.Color = '#f090g9';
+				model.Dimensions = {Width:100,Height:200};
+		
+				view.Update();
+			});
+			
+			it("updates fabric position", function(){
+				expect(view.GetFabric().left).toBe(model.Position.x);
 				expect(view.GetFabric().top).toBe(model.Position.y);
 			});
 			
 			it("updates color",function(){
 				expect(view.GetFabric().fill).toBe(model.Color);
 			});
-		});
-		
-		describe("when update is requested",function(){
-			beforeEach(function(){
-				model.Position = {x:10,y:20};
-		
-				view.Update();
-			});
 			
-			it("updates fabric position", function(){
-				expect(view.GetFabric().left).toBe(10*model.Position.x);
-				expect(view.GetFabric().top).toBe(model.Position.y);
+			it("updates dimensions", function(){
+				expect(view.GetFabric().width).toBe(model.Dimensions.Width);
+				expect(view.GetFabric().height).toBe(model.Dimensions.Height);
 			});
 		});
 	});

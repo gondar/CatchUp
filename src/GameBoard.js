@@ -52,11 +52,11 @@ GameBoard.prototype.Remove = function(name) {
 }
 
 GameBoard.prototype.MoveRight = function(name) {
-	this._Move(name, 1);
+	this._Move(name, 10);
 }
 
 GameBoard.prototype.MoveLeft = function(name) {
-	this._Move(name, -1);
+	this._Move(name, -10);
 }
 
 GameBoard.prototype._Move = function(name, direction){

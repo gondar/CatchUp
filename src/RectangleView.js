@@ -14,8 +14,9 @@ RectangleView.prototype.SetModel = function(model){
 }
 
 RectangleView.prototype.Update = function(){
-	this._fabric.set({left: this.model.Position.x*10, top: this.model.Position.y});
+	this._fabric.set({left: this.model.Position.x, top: this.model.Position.y});
 	this._fabric.set({fill: this.model.Color});
+	this._fabric.set({width: this.model.Dimensions.Width, height: this.model.Dimensions.Height});
 }
 
 RectangleView.prototype.GetFabric = function(){

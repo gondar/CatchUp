@@ -78,10 +78,11 @@ describe("Game", function(){
 		var subject;
 		var player;
 		var currentColor;
+		var board;
 		beforeEach(function(){
 			currentColor = ''
 			player = {Color:currentColor};
-			var board = buildBoard([],["collision1object"],player);
+			board = buildBoard([],["collision1object", "collision2"],player);
 			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var fallingObjectLimit = 10;
 			subject = new Game(board, factory, 10, 200, 200,"player");
@@ -95,6 +96,12 @@ describe("Game", function(){
 				currentColor = player.Color;
 			}
 		});
+		
+		it("removes all colliding object from a board", function(){
+			subject.RoundFinished();	
+			expect(board.Remove).toHaveBeenCalledWith("collision1object");
+			expect(board.Remove).toHaveBeenCalledWith("collision2");
+		});
 	});
 });
 
@@ -103,11 +110,13 @@ describe("Game", function(){
 			Add:function(){},
 			MoveDownFallingObjects:function(){},
 			GetCollisions:function(){},
-			Get:function(){}
+			Get:function(){},
+			Remove: function(){}
 		};
 		spyOn(board, 'MoveDownFallingObjects').andReturn(result);
 		spyOn(board, 'Add').andReturn(result);
 		spyOn(board, 'GetCollisions').andReturn(collisions);
 		spyOn(board, 'Get').andReturn(player);
+		spyOn(board, 'Remove');
 		return board;
 	}

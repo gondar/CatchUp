@@ -16,10 +16,15 @@ Game.prototype.RoundFinished = function(){
 	this._fallingObjectCount = this._fallingObjectCount - removedObjects.length;
 	if (this._fallingObjectCount < this._limit)
 		this._addFallingObject(fallingObjectString);
-	if (this._board.GetCollisions(this._playerObjectName).length != 0)
+	var collisions = this._board.GetCollisions(this._playerObjectName);
+	if (collisions.length != 0)
 	{	
 		this._board.Get(this._playerObjectName).Color = this._generateColor();
 	};
+	console.log(collisions);
+	for (var element in collisions) {
+		this._board.Remove(collisions[element]);
+	}
 }
 
 Game.prototype._generateColor = function(){

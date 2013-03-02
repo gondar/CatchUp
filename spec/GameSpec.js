@@ -86,6 +86,7 @@ describe("Game", function(){
 			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var fallingObjectLimit = 10;
 			subject = new Game(board, factory, 1, 200, 200,"player");
+			subject._fallingObjectCount=1
 		});
 		
 		it("changes player color for every collision",function(){
@@ -101,11 +102,12 @@ describe("Game", function(){
 			subject.RoundFinished();	
 			expect(board.Remove).toHaveBeenCalledWith("collision1object");
 			expect(board.Remove).toHaveBeenCalledWith("collision2");
+			expect(subject._fallingObjectCount).toBe(1);
 		});
 		
 		it("adds new object for each removed object", function(){
 			subject.RoundFinished();
-			expect(board.Add.calls.length).toBe(3); //2 for catched objects 1 for a game start
+			expect(board.Add.calls.length).toBe(2);
 		});
 	});
 });

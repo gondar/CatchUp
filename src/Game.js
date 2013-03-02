@@ -24,6 +24,7 @@ Game.prototype.RoundFinished = function(){
 	console.log(collisions);
 	for (var element in collisions) {
 		this._board.Remove(collisions[element]);
+		this._addFallingObject(fallingObjectString);
 	}
 }
 

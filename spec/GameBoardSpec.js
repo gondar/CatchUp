@@ -118,12 +118,12 @@ describe("GameBoard", function() {
 		
 		subject.MoveRight(object.Name);
 		
-		expect(object.Position).toEqual({x:1,y:0});
+		expect(object.Position).toEqual({x:10,y:0});
 	});
 	
 	it("allows to move object left", function(){
 		var subject = new GameBoard();
-		var object = {"Name": "test", "Position": {x:1,y:0}};
+		var object = {"Name": "test", "Position": {x:10	,y:0}};
 		subject.Add(object.Name, object);
 		
 		subject.MoveLeft(object.Name);

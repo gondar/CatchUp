@@ -1,6 +1,6 @@
 function CollisionDetector(){
 	var IsInRange = function(value, Range){
-		return value >= Range[0] && value <= Range[1];
+		return value > Range[0] && value < Range[1];
 	};
 	
 	var IsXColliding = function(object1,object2) {

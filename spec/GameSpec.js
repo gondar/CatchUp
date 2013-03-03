@@ -79,13 +79,15 @@ describe("Game", function(){
 		var player;
 		var currentColor;
 		var board;
+		var pointsCounter;
 		beforeEach(function(){
 			currentColor = ''
 			player = {Color:currentColor};
 			board = buildBoard([],["collision1object", "collision2"],player);
+			pointsCounter = {Points:0};
 			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var fallingObjectLimit = 10;
-			subject = new Game(board, factory, 1, 200, 200,"player");
+			subject = new Game(board, factory, 1, 200, 200,"player", pointsCounter);
 			subject._fallingObjectCount=1
 		});
 		
@@ -95,6 +97,14 @@ describe("Game", function(){
 				subject.RoundFinished();			
 				expect(player.Color).not.toBe(currentColor);
 				currentColor = player.Color;
+			}
+		});
+		
+		it("adds points for every collision", function(){
+			for (var i=0;i<10;i++)
+			{
+				subject.RoundFinished();			
+				expect(pointsCounter.Points).toBe((i+1)*2);//two collisions in each round
 			}
 		});
 		

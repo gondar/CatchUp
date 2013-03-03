@@ -49,7 +49,7 @@ GameView.prototype.Update = function() {
 		this._canvas.remove(this._elementsOnBoard[key]);
 		delete this._elementsOnBoard[key];		
 	}
-	var pointsView = this.gameBoard.GetPoints().GetView();
+	var pointsView = this.gameBoard.GetPointsCounter().GetView();
 	this._add("Points", pointsView);
 	pointsView.Update();
 	this._canvas.renderAll();

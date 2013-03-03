@@ -3,9 +3,10 @@ function PointsCounterView(){
 		left: 0,
 		top: 0,
 		fill: 'red',
-		width: 40,
-		height: 40
+		width: 80,
+		height: 80
 	});
+	this._points = 0;
 }
 
 PointsCounterView.prototype.SetModel = function(model){
@@ -14,9 +15,10 @@ PointsCounterView.prototype.SetModel = function(model){
 }
 
 PointsCounterView.prototype.Update = function(){
-	this._fabric.set({left: this.model.Position.x, top: this.model.Position.y});
-	this._fabric.set({fill: this.model.Color});
-	this._fabric.set({width: this.model.Dimensions.Width, height: this.model.Dimensions.Height});
+	this._points = this.model.Points*10; 
+	var color = "rgb("+this._points.toString()+",100,100)";
+	this._fabric.set({fill: color});
+	console.log(color);
 }
 
 PointsCounterView.prototype.GetFabric = function(){

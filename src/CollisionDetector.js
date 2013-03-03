@@ -31,10 +31,6 @@ function CollisionDetector(){
 			IsCollision: function(object1,object2){				
 				var x = IsXColliding(object1,object2);
 				var y = IsYColliding(object1,object2);
-				if (x && y) {
-					console.log({X:x,Y:y});
-					//debugger;
-				}
 				return x&& y;
 			}
 	}

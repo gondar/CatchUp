@@ -110,7 +110,7 @@ describe("GameView", function(){
 function mockGameBoardWithPointsOnly(mockPointsModel) {
 	var board = {
 					GetObjectsOnBoard:function(){return [];},
-					GetPoints:function(){return mockPointsModel;}
+					GetPointsCounter:function(){return mockPointsModel;}
 				};
 	return board;
 };
@@ -124,7 +124,7 @@ function mockGameBoardWithRemoveElementsFeature(){
 						return {};
 					return {"player": player};
 				},
-				GetPoints: mockPointsObject()
+				GetPointsCounter: mockPointsObject()
 			};
 }
 
@@ -132,7 +132,7 @@ function mockGameBoardWithPlayerOnly(player) {
 	var player = player || mockPlayerObject();
 	var board = {
 			GetObjectsOnBoard: function() { return {"player": player}; },
-			GetPoints: mockPointsObject()
+			GetPointsCounter: mockPointsObject()
 	};
 	return board;
 }

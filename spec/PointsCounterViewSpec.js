@@ -22,27 +22,15 @@ describe("Points Counter View", function(){
 
 		beforeEach(function(){
 			model = {
-				Position: {x:1,y:10},
-				Color: '#000000',
-				Dimensions: {Width:100,Height:200}
+				Points: 10
 			};
 	
 			view.SetModel(model);
 			view.Update();
 		});
 		
-		it("updates fabric position", function(){
-			expect(view.GetFabric().left).toBe(model.Position.x);
-			expect(view.GetFabric().top).toBe(model.Position.y);
-		});
-			
-		it("updates color",function(){
-			expect(view.GetFabric().fill).toBe(model.Color);
-		});
-			
-		it("updates dimensions", function(){
-			expect(view.GetFabric().width).toBe(model.Dimensions.Width);
-			expect(view.GetFabric().height).toBe(model.Dimensions.Height);
+		it("Reads points value", function(){
+			expect(view._points).toBe(100);
 		});
 	});
 });

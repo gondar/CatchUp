@@ -1,8 +1,9 @@
-function GameBoard(width, height,collisionDetector){
+function GameBoard(width, height,collisionDetector, pointsCounter){
 	this.elements = {};
 	this._width = width;
 	this._height = height;
 	this._collisionDetector = collisionDetector;
+	this._pointsCounter = pointsCounter;
 }
 
 GameBoard.prototype.Add = function(name, object){
@@ -15,6 +16,10 @@ GameBoard.prototype.Get = function(name) {
 
 GameBoard.prototype.GetObjectsOnBoard = function() {
 	return this.elements;
+}
+
+GameBoard.prototype.GetPointsCounter = function() {
+	return this._pointsCounter;	
 }
 
 GameBoard.prototype.MoveDownFallingObjects = function(name) {
@@ -40,7 +45,6 @@ GameBoard.prototype.GetCollisions = function(name) {
 			continue;
 		var element = this.elements[key];
 		if (this._collisionDetector.IsCollision(object,element)) {
-			console.log("Collision");
 			colliding.push(key);
 		}
 	}

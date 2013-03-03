@@ -1,4 +1,4 @@
-function Game(board, factory, limit, width, height, playerObjectName){
+function Game(board, factory, limit, width, height, playerObjectName, pointsCounter){
 	this._board = board;
 	this._factory = factory;
 	this._fallingObjectIndex = 0;
@@ -8,6 +8,7 @@ function Game(board, factory, limit, width, height, playerObjectName){
 	this._height = height;
 	this._playerObjectName = playerObjectName;
 	this._previousColor = '';
+	this._pointsCounter = pointsCounter;
 }
 
 Game.prototype.RoundFinished = function(){
@@ -21,11 +22,11 @@ Game.prototype.RoundFinished = function(){
 	{	
 		this._board.Get(this._playerObjectName).Color = this._generateColor();
 	};
-	console.log(collisions);
 	for (var element in collisions) {
 		this._fallingObjectCount--;
 		this._board.Remove(collisions[element]);
 		this._addFallingObject(fallingObjectString);
+		this._pointsCounter.Points++;
 	}
 }
 

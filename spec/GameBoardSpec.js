@@ -53,6 +53,18 @@ describe("GameBoard", function() {
 			});
 		})
 		
+		describe("When requested for points counter",function(){
+			var pointsCounter;
+			beforeEach(function(){
+				pointsCounter = {}
+				board = new GameBoard(100,100,null,pointsCounter);
+			});
+			
+			it("returns valid points counter model", function(){
+				expect(board.GetPointsCounter()).toBe(pointsCounter);
+			});
+		});
+		
 		describe("Finding collisions",function(){
 			describe("When requested list of all collisions for a given object", function(){
 				var outcome;

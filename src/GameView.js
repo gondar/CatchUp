@@ -26,7 +26,6 @@ GameView.prototype.CreateFabricInDiv = function(id){
 
 GameView.prototype.AddKeypressListeners = function(controller) {
 	$(document).keydown({controller: controller}, function(event){
-		//console&&console.log(event);
 		var controller = event.data.controller;
 		if (event.which == GameView.prototype.KEYBOARD_LEFT){
 			controller.MovePlayerLeft();
@@ -50,17 +49,7 @@ GameView.prototype.Update = function() {
 		this._canvas.remove(this._elementsOnBoard[key]);
 		delete this._elementsOnBoard[key];		
 	}
+	var pointsView = this.gameBoard.GetPoints().GetView();
+	pointsView.Update();
 	this._canvas.renderAll();
-}
-
-GameView.prototype.MockCreateRectangle = function(){
-var rect = new fabric.Rect({
-  left: 100,
-  top: 100,
-  fill: 'red',
-  width: 20,
-  height: 20
-});
-
-this._canvas.add(rect);
 }

@@ -46,6 +46,8 @@ GameView.prototype.Update = function() {
 	for (var key in this._elementsOnBoard) {
 		if (key in elements) 
 			continue;
+		if (key == "Points")
+			continue;
 		this._canvas.remove(this._elementsOnBoard[key]);
 		delete this._elementsOnBoard[key];		
 	}

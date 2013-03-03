@@ -30,7 +30,7 @@ describe("Points Counter View", function(){
 		});
 		
 		it("Reads points value", function(){
-			expect(view._points).toBe(100);
+			expect(view._points).toBe(10);
 		});
 	});
 });

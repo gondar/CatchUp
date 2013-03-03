@@ -43,18 +43,6 @@ describe("GameView", function(){
 		$(document).off("keydown");
 	});
 	
-	it("adds elements to canvas", function(){
-		var board = mockGameBoardWithPlayerOnly();
-		var controller = null;
-		var subject = new GameView(board, controller);
-		setFixtures("<div id='myid'></div>");		
-		subject.CreateFabricInDiv("#myid");
-		
-		subject.Update();
-		
-		expect(subject._canvas.getObjects().length).toBe(1);
-	});
-	
 	it("adds elements to canvas only once", function(){
 		var board = mockGameBoardWithPlayerOnly();
 		var controller = null;
@@ -65,7 +53,7 @@ describe("GameView", function(){
 		subject.Update();
 		subject.Update();
 		
-		expect(subject._canvas.getObjects().length).toBe(1);
+		expect(subject._canvas.getObjects().length).toBe(2); //One for player one for points
 	});
 	
 	it("removes elements which are removed from model",function(){
@@ -79,7 +67,7 @@ describe("GameView", function(){
 		board.MockRemoveAll = true;
 		subject.Update();
 		
-		expect(subject._canvas.getObjects().length).toBe(0);
+		expect(subject._canvas.getObjects().length).toBe(1); //points object remains intact
 	});
 	
 	it("updates each element on board view", function(){
@@ -93,21 +81,28 @@ describe("GameView", function(){
 		
 		expect(board.GetObjectsOnBoard()["player"].GetView().UpdateCalledNumber).toBe(1);
 	});
-	describe("when updating board view", function(){
+	describe("when updating board (points behaviour)", function(){
 		var mockPointsModel;
+		var subject;
 		beforeEach(function(){
 			mockPointsModel = {GetView:function(){}};
 			spyOn(mockPointsModel, 'GetView').andReturn(mockView());
 			var board = mockGameBoardWithPointsOnly(mockPointsModel);
 			var controller = null;
-			var subject = new GameView(board, controller);
+			subject = new GameView(board, controller);
 			setFixtures("<div id='myid'></div>");		
 			subject.CreateFabricInDiv("#myid");
 		
 			subject.Update();			
+			subject.Update();			
 		});
+		
 		it("updates points on the board", function(){
-			expect(mockPointsModel.GetView().UpdateCalledNumber).toBe(1);
+			expect(mockPointsModel.GetView().UpdateCalledNumber).toBe(2);
+		});
+		
+		it("adds points view to canvas only once", function(){
+			expect(subject._canvas.getObjects().length).toBe(1);
 		});
 	});
 });
@@ -127,16 +122,16 @@ function mockGameBoardWithRemoveElementsFeature(){
 				GetObjectsOnBoard: function() {
 					if (this.MockRemoveAll)
 						return {};
-					return player;
+					return {"player": player};
 				},
-				GetPoints:mockPointsObject()
+				GetPoints: mockPointsObject()
 			};
 }
 
-function mockGameBoardWithPlayerOnly() {
-	var player = mockPlayerObject();
+function mockGameBoardWithPlayerOnly(player) {
+	var player = player || mockPlayerObject();
 	var board = {
-			GetObjectsOnBoard: function() { return player; },
+			GetObjectsOnBoard: function() { return {"player": player}; },
 			GetPoints: mockPointsObject()
 	};
 	return board;
@@ -144,13 +139,12 @@ function mockGameBoardWithPlayerOnly() {
 
 function mockPlayerObject(){
 	var view = mockView();
-	return 	{ "player": {
-					view: null,
-					GetView: function(){
-						return view;
-						}
-					}
-					};
+	return {
+				view: null,
+				GetView: function(){
+					return view;
+				}
+	};
 }
 
 function mockPointsObject(){

@@ -30,5 +30,6 @@
         <File name="src\GameObject.js" />
         <File name="src\GameView.js" />
         <File name="src\RectangleView.js" />
+        <File name="src\CollisionDetector.js" />
     </Project>
 </NotepadPlus>

@@ -77,12 +77,10 @@ describe("Game", function(){
 	describe("When found collision with player", function(){
 		var subject;
 		var player;
-		var currentColor;
 		var board;
 		var pointsCounter;
 		beforeEach(function(){
-			currentColor = ''
-			player = {Color:currentColor};
+			player = {Collision:false};
 			board = buildBoard([],["collision1object", "collision2"],player);
 			pointsCounter = {Points:0};
 			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
@@ -91,13 +89,9 @@ describe("Game", function(){
 			subject._fallingObjectCount=1
 		});
 		
-		it("changes player color for every collision",function(){
-			for (var i=0;i<10;i++)
-			{
-				subject.RoundFinished();			
-				expect(player.Color).not.toBe(currentColor);
-				currentColor = player.Color;
-			}
+		it("changes player state for every collision",function(){
+			subject.RoundFinished();			
+			expect(player.Collision).toBe(true);
 		});
 		
 		it("adds points for every collision", function(){
@@ -133,7 +127,7 @@ describe("Game", function(){
 		spyOn(board, 'MoveDownFallingObjects').andReturn(result);
 		spyOn(board, 'Add').andReturn(result);
 		spyOn(board, 'GetCollisions').andReturn(collisions);
-		spyOn(board, 'Get').andReturn(player);
+		spyOn(board, 'Get').andReturn(player||{Collision:false});
 		spyOn(board, 'Remove');
 		return board;
 	}

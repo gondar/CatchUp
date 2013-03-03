@@ -12,6 +12,7 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
 }
 
 Game.prototype.RoundFinished = function(){
+	this._board.Get(this._playerObjectName).Collision = false;
 	var fallingObjectString = "FallingObject";
 	var removedObjects = this._board.MoveDownFallingObjects(fallingObjectString);
 	this._fallingObjectCount = this._fallingObjectCount - removedObjects.length;
@@ -20,7 +21,7 @@ Game.prototype.RoundFinished = function(){
 	var collisions = this._board.GetCollisions(this._playerObjectName);
 	if (collisions.length != 0)
 	{	
-		this._board.Get(this._playerObjectName).Color = this._generateColor();
+		this._board.Get(this._playerObjectName).Collision = true;
 	};
 	for (var element in collisions) {
 		this._fallingObjectCount--;
@@ -28,17 +29,6 @@ Game.prototype.RoundFinished = function(){
 		this._addFallingObject(fallingObjectString);
 		this._pointsCounter.Points++;
 	}
-}
-
-Game.prototype._generateColor = function(){
-	var colorA = "#2D970D";
-	var colorB = "#110D97";
-	if (this._previousColor == colorA) {
-		this._previousColor = colorB;
-		return colorB;
-	}
-	this._previousColor = colorA;
-	return colorA;
 }
 
 Game.prototype._addFallingObject = function(fallingObjectString){	

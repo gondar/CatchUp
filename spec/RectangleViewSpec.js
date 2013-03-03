@@ -23,7 +23,7 @@ describe("RectangleView", function(){
 		beforeEach(function(){
 			model = {
 				Position: {x:1,y:10},
-				Color: '#000000',
+				State: false,
 				Dimensions: {Width:100,Height:200}
 			};
 	
@@ -33,7 +33,6 @@ describe("RectangleView", function(){
 		describe("when update is requested",function(){
 			beforeEach(function(){
 				model.Position = {x:10,y:20};
-				model.Color = '#f090g9';
 				model.Dimensions = {Width:100,Height:200};
 		
 				view.Update();
@@ -42,10 +41,6 @@ describe("RectangleView", function(){
 			it("updates fabric position", function(){
 				expect(view.GetFabric().left).toBe(model.Position.x);
 				expect(view.GetFabric().top).toBe(model.Position.y);
-			});
-			
-			it("updates color",function(){
-				expect(view.GetFabric().fill).toBe(model.Color);
 			});
 			
 			it("updates dimensions", function(){

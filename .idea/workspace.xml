@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameFactorySpec.js" afterPath="$PROJECT_DIR$/spec/GameFactorySpec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameSpec.js" afterPath="$PROJECT_DIR$/spec/GameSpec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.js" afterPath="$PROJECT_DIR$/src/Game.js" />
     </list>
@@ -45,7 +44,7 @@
       <file leaf-file-name="Game.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="36" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+            <state line="28" column="53" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -54,7 +53,7 @@
       <file leaf-file-name="GameSpec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/GameSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="68" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.6269231">
+            <state line="111" column="51" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.6596154">
               <folding />
             </state>
           </provider>
@@ -136,8 +135,8 @@
         <option value="$PROJECT_DIR$/lib/JasmineAdapter.js" />
         <option value="$PROJECT_DIR$/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/spec/GameViewSpec.js" />
-        <option value="$PROJECT_DIR$/src/Game.js" />
         <option value="$PROJECT_DIR$/spec/GameFactorySpec.js" />
+        <option value="$PROJECT_DIR$/src/Game.js" />
         <option value="$PROJECT_DIR$/spec/GameSpec.js" />
       </list>
     </option>
@@ -488,14 +487,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="36" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+        <state line="28" column="53" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/GameSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="68" selection-start="3164" selection-end="3164" vertical-scroll-proportion="0.6269231">
+        <state line="111" column="51" selection-start="3295" selection-end="3295" vertical-scroll-proportion="0.6596154">
           <folding />
         </state>
       </provider>

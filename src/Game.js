@@ -10,32 +10,40 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
     var _previousColor = '';
     var _pointsCounter = pointsCounter;
 
-    var _addFallingObject = function(fallingObjectString){
+    function _addFallingObject(fallingObjectString){
         _fallingObjectCount++;
         var name = fallingObjectString+_fallingObjectIndex++;
         var fallingObject = _factory.BuildFallingObject(_width);
         _board.Add(name,fallingObject);
     }
 
+    function _handleCollisions(fallingObjectString) {
+        var collisions = _board.GetCollisions(_playerObjectName);
+        if (collisions.length != 0) {
+            _board.Get(_playerObjectName).Collision = true;
+        }
+        ;
+        for (var element in collisions) {
+            _fallingObjectCount--;
+            _board.Remove(collisions[element]);
+//            _addFallingObject(fallingObjectString);
+            _pointsCounter.Points++;
+        }
+    }
+
+    function _moveAndAddFallingObjects(fallingObjectString) {
+        var removedObjects = _board.MoveDownFallingObjects(fallingObjectString);
+        _fallingObjectCount = _fallingObjectCount - removedObjects.length;
+    }
+
     return {
         RoundFinished: function(){
             _board.Get(_playerObjectName).Collision = false;
             var fallingObjectString = "FallingObject";
-            var removedObjects = _board.MoveDownFallingObjects(fallingObjectString);
-            _fallingObjectCount = _fallingObjectCount - removedObjects.length;
+            _moveAndAddFallingObjects(fallingObjectString);
+            _handleCollisions(fallingObjectString);
             if (_fallingObjectCount < _limit)
                 _addFallingObject(fallingObjectString);
-            var collisions = _board.GetCollisions(_playerObjectName);
-            if (collisions.length != 0)
-            {
-                _board.Get(_playerObjectName).Collision = true;
-            };
-            for (var element in collisions) {
-                _fallingObjectCount--;
-                _board.Remove(collisions[element]);
-                _addFallingObject(fallingObjectString);
-                _pointsCounter.Points++;
-            }
         }
     }
 }

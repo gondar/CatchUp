@@ -1,7 +1,12 @@
 function GameFactory() {
 }
 
-GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed = 100, limit = 2, width = 400, height=180) {
+GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed, limit, width, height) {
+    gameSpeed = gameSpeed || 100;
+    limit = limit || 2;
+    width = width || 400;
+    height = height || 180;
+
 	var pointsCouner = new PointsCounter(new PointsCounterView());
 	var board = new GameBoard(width, height, new CollisionDetector(), pointsCouner);
 	var view = new GameView(board, width, height);

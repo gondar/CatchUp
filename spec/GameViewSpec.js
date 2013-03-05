@@ -5,7 +5,7 @@ describe("GameView", function(){
 		
 		subject.CreateFabricInDiv("#myid");
 		
-		expect($("#myid")).not.toBeEmpty();
+		expect($("#myid").text).not.toBe("");
 		expect(subject._canvas).not.toBe(undefined);
 		expect(subject._canvas.getWidth()).toBe(100);
 		expect(subject._canvas.getHeight()).toBe(200);

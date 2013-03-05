@@ -1,9 +1,9 @@
-function GameView(gameBoard,width=200,height=200){
+function GameView(gameBoard,width,height){
 	this.gameBoard = gameBoard;
 	this.canvasId = "GameCanvas";
 	this._elementsOnBoard = {};
-	this._width = width;
-	this._height = height;
+	this._width = width || 200;
+	this._height = height || 200;
 }
 
 GameView.prototype.KEYBOARD_LEFT = 37;

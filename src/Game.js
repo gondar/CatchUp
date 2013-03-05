@@ -1,39 +1,42 @@
 function Game(board, factory, limit, width, height, playerObjectName, pointsCounter){
-	this._board = board;
-	this._factory = factory;
-	this._fallingObjectIndex = 0;
-	this._fallingObjectCount = 0;
-	this._limit = limit;
-	this._width = width;
-	this._height = height;
-	this._playerObjectName = playerObjectName;
-	this._previousColor = '';
-	this._pointsCounter = pointsCounter;
+	var _board = board;
+    var _factory = factory;
+    var _fallingObjectIndex = 0;
+    var _fallingObjectCount = 0;
+    var _limit = limit;
+    var _width = width;
+    var _height = height;
+    var _playerObjectName = playerObjectName;
+    var _previousColor = '';
+    var _pointsCounter = pointsCounter;
+
+    var _addFallingObject = function(fallingObjectString){
+        _fallingObjectCount++;
+        var name = fallingObjectString+_fallingObjectIndex++;
+        var fallingObject = _factory.BuildFallingObject(_width);
+        _board.Add(name,fallingObject);
+    }
+
+    return {
+        RoundFinished: function(){
+            _board.Get(_playerObjectName).Collision = false;
+            var fallingObjectString = "FallingObject";
+            var removedObjects = _board.MoveDownFallingObjects(fallingObjectString);
+            _fallingObjectCount = _fallingObjectCount - removedObjects.length;
+            if (_fallingObjectCount < _limit)
+                _addFallingObject(fallingObjectString);
+            var collisions = _board.GetCollisions(_playerObjectName);
+            if (collisions.length != 0)
+            {
+                _board.Get(_playerObjectName).Collision = true;
+            };
+            for (var element in collisions) {
+                _fallingObjectCount--;
+                _board.Remove(collisions[element]);
+                _addFallingObject(fallingObjectString);
+                _pointsCounter.Points++;
+            }
+        }
+    }
 }
 
-Game.prototype.RoundFinished = function(){
-	this._board.Get(this._playerObjectName).Collision = false;
-	var fallingObjectString = "FallingObject";
-	var removedObjects = this._board.MoveDownFallingObjects(fallingObjectString);
-	this._fallingObjectCount = this._fallingObjectCount - removedObjects.length;
-	if (this._fallingObjectCount < this._limit)
-		this._addFallingObject(fallingObjectString);
-	var collisions = this._board.GetCollisions(this._playerObjectName);
-	if (collisions.length != 0)
-	{	
-		this._board.Get(this._playerObjectName).Collision = true;
-	};
-	for (var element in collisions) {
-		this._fallingObjectCount--;
-		this._board.Remove(collisions[element]);
-		this._addFallingObject(fallingObjectString);
-		this._pointsCounter.Points++;
-	}
-}
-
-Game.prototype._addFallingObject = function(fallingObjectString){	
-	this._fallingObjectCount++;
-	var name = fallingObjectString+this._fallingObjectIndex++;
-	var fallingObject = this._factory.BuildFallingObject(this._width);
-	this._board.Add(name,fallingObject);
-}

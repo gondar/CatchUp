@@ -85,8 +85,7 @@ describe("Game", function(){
 			pointsCounter = {Points:0};
 			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var fallingObjectLimit = 10;
-			subject = new Game(board, factory, 1, 200, 200,"player", pointsCounter);
-			subject._fallingObjectCount=1
+			subject = new Game(board, factory, 0, 200, 200,"player", pointsCounter);
 		});
 		
 		it("changes player state for every collision",function(){
@@ -106,7 +105,6 @@ describe("Game", function(){
 			subject.RoundFinished();	
 			expect(board.Remove).toHaveBeenCalledWith("collision1object");
 			expect(board.Remove).toHaveBeenCalledWith("collision2");
-			expect(subject._fallingObjectCount).toBe(1);
 		});
 		
 		it("adds new object for each removed object", function(){

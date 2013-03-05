@@ -9,22 +9,6 @@ describe("Game Factory", function() {
 			game = subject.BuildGame();
 		});
 		
-		it("creates game controller with a new view", function() {
-			 expect(GameController.mostRecentCall.args[0] instanceof GameView).toEqual(true);
-		});
-		
-		it("creates game controller with a new board", function() {
-			 expect(GameController.mostRecentCall.args[1] instanceof GameBoard).toEqual(true);
-		});
-		
-		it("creates game controller with a new player", function() {
-			expect(GameController.mostRecentCall.args[2] instanceof GameObject).toEqual(true);
-		});
-		
-		it("creates game controller with a new game", function() {
-			expect(GameController.mostRecentCall.args[4] instanceof Game).toEqual(true);
-		});
-		
 		it("Initializes and returns game controller", function() {
 			expect(game.Initialize).toHaveBeenCalled();
 		});

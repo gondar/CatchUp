@@ -9,8 +9,9 @@ describe("GameController", function(){
 			jasmine.Clock.useMock();
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
 			board = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize"]);
+            var mockGame = jasmine.createSpyObj("Game",["IsPaused"]);
 			player = {Id:12};
-			subject = new GameController(view, board, player);
+			subject = new GameController(view, board, player, 100, mockGame);
 			divId = "#id";
 		
 			subject.Initialize(divId,"player");
@@ -41,7 +42,8 @@ describe("GameController", function(){
 		beforeEach(function() {
 			view = jasmine.createSpyObj("GameView",["Update"]);
 			board = jasmine.createSpyObj("GameBoard",["MoveLeft"]);
-			subject = new GameController(view, board, null);
+            var mockGame = jasmine.createSpyObj("Game",["IsPaused"]);
+			subject = new GameController(view, board, null,100, mockGame);
 			
 			subject.MovePlayerLeft();
 		});
@@ -63,7 +65,8 @@ describe("GameController", function(){
 		beforeEach(function() {
 			view = jasmine.createSpyObj("GameView",["Update"]);
 			board = jasmine.createSpyObj("GameBoard",["MoveRight"]);
-			subject = new GameController(view, board, null);
+            var mockGame = jasmine.createSpyObj("MockGame",["IsPaused"]);
+			subject = new GameController(view, board, null, 100, mockGame);
 			
 			subject.MovePlayerRight();
 		});

@@ -4,14 +4,18 @@
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameController.js" afterPath="$PROJECT_DIR$/src/GameController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameControllerSpec.js" afterPath="$PROJECT_DIR$/spec/GameControllerSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameView.js" afterPath="$PROJECT_DIR$/src/GameView.js" />
     </list>
     <ignored path="CatchUp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362842900796" ignored="false" />
     <file path="/Game.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362843634656" ignored="false" />
     <file path="/GameSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362843701593" ignored="false" />
-    <file path="/GameController.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362844367312" ignored="false" />
-    <file path="/GameControllerSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362844667687" ignored="false" />
+    <file path="/GameController.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362845559921" ignored="false" />
+    <file path="/GameControllerSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362845675234" ignored="false" />
+    <file path="/*.regexp" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362844785031" ignored="false" />
+    <file path="/fragment.js2" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362844806453" ignored="false" />
+    <file path="/GameView.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362845505468" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,19 +53,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameController.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="18" selection-start="140" selection-end="150" vertical-scroll-proportion="0.19767442">
+            <state line="19" column="44" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameControllerSpec.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="24" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameControllerSpec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/GameControllerSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="69" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+            <state line="105" column="12" selection-start="3347" selection-end="3347" vertical-scroll-proportion="0.43504533">
               <folding />
             </state>
           </provider>
@@ -88,13 +101,13 @@
         <option value="$PROJECT_DIR$/configs/dsfsd.jade" />
         <option value="$PROJECT_DIR$/conf/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/src/GameFactory.js" />
-        <option value="$PROJECT_DIR$/src/GameView.js" />
         <option value="$PROJECT_DIR$/lib/JasmineAdapter.js" />
         <option value="$PROJECT_DIR$/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/spec/GameViewSpec.js" />
         <option value="$PROJECT_DIR$/spec/GameFactorySpec.js" />
         <option value="$PROJECT_DIR$/src/Game.js" />
         <option value="$PROJECT_DIR$/spec/GameSpec.js" />
+        <option value="$PROJECT_DIR$/src/GameView.js" />
         <option value="$PROJECT_DIR$/src/GameController.js" />
         <option value="$PROJECT_DIR$/spec/GameControllerSpec.js" />
       </list>
@@ -325,7 +338,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.38325992" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21777222" sideWeight="0.5901116" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21777222" sideWeight="0.5901116" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3991228" sideWeight="0.49815497" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.23788546" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -403,13 +416,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/CalculatorSpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="31" selection-start="105" selection-end="136" vertical-scroll-proportion="0.0">
@@ -427,13 +433,6 @@
     <entry file="file://$PROJECT_DIR$/SpecRunner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="90" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="40" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -501,16 +500,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/GameControllerSpec.js">
+    <entry file="file://$PROJECT_DIR$/src/GameBoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="69" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="24" selection-start="740" selection-end="740" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="140" selection-end="150" vertical-scroll-proportion="0.19767442">
+        <state line="19" column="44" selection-start="700" selection-end="700" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/GameControllerSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="12" selection-start="3347" selection-end="3347" vertical-scroll-proportion="0.43504533">
           <folding />
         </state>
       </provider>

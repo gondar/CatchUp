@@ -1,10 +1,24 @@
-function GameController(view, gameBoard, player, speed, game){
+function GameController(view, gameBoard, player, speed, game, startGameView){
 	var _board = gameBoard;
 	var _player = player;
 	var _boardView = view;
 	var _gameSpeed = speed;
 	var _game = game;
-    _game.IsPaused = false;
+    var _startGameView = startGameView;
+    var _fabric;
+
+    function InitializeBoardAndBoardView(playerName, gameDivId, controller) {
+        _board.Add(playerName, _player);
+        _fabric = _boardView.CreateFabricInDiv(gameDivId);
+        _boardView.AddKeypressListeners(controller);
+        _boardView.Update();
+    }
+
+    function InitializeGameStart(controller) {
+        _startGameView.AddToFabric(_fabric);
+        _startGameView.AddKeypressListeners(controller);
+        _startGameView.Update();
+    }
 
     return {
         TimerEvent: function() {
@@ -16,10 +30,9 @@ function GameController(view, gameBoard, player, speed, game){
             setInterval(function() {
                 controller.TimerEvent();
             }, _gameSpeed);
-            _board.Add(playerName,_player);
-            _boardView.CreateFabricInDiv(gameDivId);
-            _boardView.AddKeypressListeners(controller);
-            _boardView.Update();
+            InitializeBoardAndBoardView(playerName, gameDivId, controller);
+            InitializeGameStart(controller);
+            _game.IsPaused = false;
         },
         MovePlayerLeft: function() {
             _board.MoveLeft("player");

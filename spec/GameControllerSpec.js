@@ -1,17 +1,19 @@
 describe("GameController", function(){
 	describe("During Initialize", function() {
-		var view;
+		var gameView;
+        var gameStartView;
 		var board;
 		var player;
 		var subject;
 		
 		beforeEach(function() {
 			jasmine.Clock.useMock();
-			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
+			gameView = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
 			board = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize"]);
+            gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update"]);
             var mockGame = jasmine.createSpyObj("Game",["IsPaused"]);
 			player = {Id:12};
-			subject = new GameController(view, board, player, 100, mockGame);
+			subject = new GameController(gameView, board, player, 100, mockGame,gameStartView);
 			divId = "#id";
 		
 			subject.Initialize(divId,"player");
@@ -22,16 +24,22 @@ describe("GameController", function(){
 		});
 		
 		it("creates fabric in div", function(){
-			expect(view.CreateFabricInDiv).toHaveBeenCalledWith("#id");
+			expect(gameView.CreateFabricInDiv).toHaveBeenCalledWith("#id");
 		});
 		
 		it("initializes keyboard listeners", function() {
-			expect(view.AddKeypressListeners).toHaveBeenCalledWith(subject);
+			expect(gameView.AddKeypressListeners).toHaveBeenCalledWith(subject);
 		});
 		
 		it("updates board view", function() {
-			expect(view.Update).toHaveBeenCalled();
-		});		
+			expect(gameView.Update).toHaveBeenCalled();
+		});
+
+        it("initializes game start view", function() {
+          expect(gameStartView.AddToFabric).toHaveBeenCalled();
+          expect(gameStartView.AddKeypressListeners).toHaveBeenCalled();
+          expect(gameStartView.Update).toHaveBeenCalled();
+        });
 	});
 	
 	describe("When Player Move Left Event Received", function(){
@@ -92,9 +100,10 @@ describe("GameController", function(){
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
 			board = jasmine.createSpyObj("GameBoard",["Add"]);
 			game = jasmine.createSpyObj("Game",["RoundFinished"]);
+            var gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update"]);
 			player = {Id:12};
 			var gameSpeed = 100;
-			subject = new GameController(view, board, player, gameSpeed, game);
+			subject = new GameController(view, board, player, gameSpeed, game, gameStartView);
 			divId = "#id";
 		
 			subject.Initialize(divId);

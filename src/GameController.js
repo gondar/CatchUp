@@ -45,7 +45,9 @@ function GameController(view, gameBoard, player, speed, game, startGameView){
             _boardView.Update();
         },
         StartGame: function() {
-            _game.IsPaused = false;
+            if (_game.GameState != Game.PAUSED)
+                return;
+            _game.StartGame();
             _startGameView.Update();
         }
     }

@@ -120,10 +120,12 @@ describe("GameController", function(){
 	});
 
     describe("When receiving StartGame event", function(){
-       var mockGame;
+       var gameStartSpy;
        var mockStartGameView;
        beforeEach(function(){
-           mockGame = {IsPaused:true};
+           var mockGame = {StartGame:function(){},
+               GameState: Game.PAUSED};
+           gameStartSpy = spyOn(mockGame,'StartGame');
            mockStartGameView = jasmine.createSpyObj("StartGameView",["Update"]);
            var subject = new GameController(null,null,null,100,mockGame,mockStartGameView);
 
@@ -131,11 +133,30 @@ describe("GameController", function(){
        });
 
         it("sets game pause to false", function(){
-            expect(mockGame.IsPaused).toBe(false);
+            expect(gameStartSpy).toHaveBeenCalled();
         });
 
         it("updates gameStartView", function(){
             expect(mockStartGameView.Update).toHaveBeenCalled();
+        });
+    });
+
+    describe("When receiving StartGame event but game is not paused", function(){
+        var gameStartSpy;
+        var mockStartGameView;
+        beforeEach(function(){
+            var mockGame = {StartGame:function(){},
+                        GameState: Game.FINISHED};
+            gameStartSpy = spyOn(mockGame,'StartGame');
+            mockStartGameView = jasmine.createSpyObj("StartGameView",["Update"]);
+            var subject = new GameController(null,null,null,100,mockGame,mockStartGameView);
+
+            subject.StartGame();
+        });
+
+        it("does nothing", function(){
+            expect(gameStartSpy).not.toHaveBeenCalled();
+            expect(mockStartGameView.Update).not.toHaveBeenCalled();
         });
     });
 });

@@ -37,7 +37,7 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
 
     return {
         RoundFinished: function(){
-            if (this.IsPaused == true)
+            if (this.GameState != Game.STARTED)
                 return;
             _board.Get(_playerObjectName).Collision = false;
             var fallingObjectString = "FallingObject";
@@ -45,8 +45,16 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
             _handleCollisions(fallingObjectString);
             if (_fallingObjectCount < _limit)
                 _addFallingObject(fallingObjectString);
+            if (_pointsCounter.Points >= 100)
+                this.GameState = Game.FINISHED;
         },
-        IsPaused: true
+        StartGame: function() {
+           this.GameState = Game.STARTED;
+        },
+        GameState: Game.PAUSED
     }
 }
 
+Game.PAUSED = "paused";
+Game.STARTED = "started";
+Game.FINISHED = "finished";

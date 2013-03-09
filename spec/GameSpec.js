@@ -1,5 +1,5 @@
 describe("Game", function(){
-    describe("When game is paused", function(){
+    describe("When game is started it is paused", function(){
         var board;
 
         beforeEach(function(){
@@ -14,15 +14,40 @@ describe("Game", function(){
         })
     });
 
-	describe("when round is finished", function() {
+    describe("When player gets 100 points.", function(){
+        var subject;
+        var board;
+        beforeEach(function(){
+           var mockPointsCounter = {Points:100};
+           board = buildBoard([],[]);
+           var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
+           subject = new Game(board, factory, 10, 100, 100, null, mockPointsCounter);
+           subject.StartGame();
+
+           subject.RoundFinished();
+        });
+
+        it("finishes game", function(){
+             expect(subject.GameState).toBe(Game.FINISHED);
+        });
+
+        it("does not progress falling objects", function(){
+            expect(board.MoveDownFallingObjects.callCount).toBe(1);
+            subject.RoundFinished();
+            expect(board.MoveDownFallingObjects.callCount).toBe(1);
+        })
+    });
+
+    describe("when round is finished", function() {
 		var factory;
 		var board;
 		
 		beforeEach(function() {
 			board = buildBoard([],[]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
-			var subject = new Game(board, factory,10);
-            subject.IsPaused = false;
+            var mockPointsCounter = {Points: 0};
+			var subject = new Game(board, factory,10,100,100,null,mockPointsCounter);
+            subject.StartGame();
 		
 			subject.RoundFinished();
 		});
@@ -52,9 +77,10 @@ describe("Game", function(){
 		beforeEach(function() {
 			board = buildBoard([],[]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
+            var mockPointsCounter = {Points: 0};
 			fallingObjectsLimit = 2;
-			var subject = new Game(board, factory, fallingObjectsLimit);
-            subject.IsPaused = false;
+			var subject = new Game(board, factory, fallingObjectsLimit, 100, 100, null, mockPointsCounter);
+            subject.StartGame();
 		
 			subject.RoundFinished();
 			subject.RoundFinished();
@@ -79,9 +105,10 @@ describe("Game", function(){
 		beforeEach(function() {
 			board = buildBoard([{name:"removedObject"}],[]);
 			factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
+            var mockPointsCounter = {Points: 0};
 			fallingObjectsLimit = 1;
-			var subject = new Game(board, factory, fallingObjectsLimit);
-            subject.IsPaused = false;
+			var subject = new Game(board, factory, fallingObjectsLimit,100,100,null,mockPointsCounter);
+            subject.StartGame();
 		
 			subject.RoundFinished();
 		});
@@ -103,7 +130,7 @@ describe("Game", function(){
 			var factory = jasmine.createSpyObj("GameFactory", ["BuildFallingObject"]);
 			var fallingObjectLimit = 10;
 			subject = new Game(board, factory, 2, 200, 200,"player", pointsCounter);
-            subject.IsPaused = false;
+            subject.StartGame();
 		});
 		
 		it("changes player state for every collision",function(){

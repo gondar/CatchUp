@@ -34,7 +34,7 @@ function GameStartView(){
             })
         },
         Update: function(){
-           if (_canvas != null && !_model.IsPaused) {
+           if (_canvas != null && _model.GameState != Game.PAUSED) {
                _fabricText.opacity = 0;
                _fabricBackground.animate('opacity',0,
                    {

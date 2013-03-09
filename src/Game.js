@@ -26,7 +26,6 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
         for (var element in collisions) {
             _fallingObjectCount--;
             _board.Remove(collisions[element]);
-//            _addFallingObject(fallingObjectString);
             _pointsCounter.Points++;
         }
     }
@@ -38,13 +37,16 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
 
     return {
         RoundFinished: function(){
+            if (this.IsPaused == true)
+                return;
             _board.Get(_playerObjectName).Collision = false;
             var fallingObjectString = "FallingObject";
             _moveAndAddFallingObjects(fallingObjectString);
             _handleCollisions(fallingObjectString);
             if (_fallingObjectCount < _limit)
                 _addFallingObject(fallingObjectString);
-        }
+        },
+        IsPaused: true
     }
 }
 

@@ -4,6 +4,7 @@ function GameController(view, gameBoard, player, speed, game){
 	this._boardView = view;
 	this._gameSpeed = speed;
 	this._game = game;
+    this._game.IsPaused = false;
 }
 
 GameController.prototype.TimerEvent = function() {

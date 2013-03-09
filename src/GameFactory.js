@@ -10,7 +10,7 @@ GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed, limit, width, hei
 	var pointsCouner = new PointsCounter(new PointsCounterView());
 	var board = new GameBoard(width, height, new CollisionDetector(), pointsCouner);
 	var view = new GameView(board, width, height);
-	var player = this.BuildPlayer();
+	var player = this.BuildPlayer(width,height);
 	var playerObjectName = "player";
 	var game = new Game(board, this, limit, width, height, playerObjectName, pointsCouner);
 	var controller = new GameController(view, board, player, gameSpeed, game, new GameStartView());
@@ -18,8 +18,8 @@ GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed, limit, width, hei
 	return controller;
 }
 
-GameFactory.prototype.BuildPlayer = function() {
-	return this._BuildGameObjectWithRectangleView(15,100);
+GameFactory.prototype.BuildPlayer = function(boardWidth,boardHeight) {
+	return this._BuildGameObjectWithRectangleView(boardWidth/2,boardHeight-30);
 }
 
 GameFactory.prototype.BuildFallingObject = function(boardWidth) {

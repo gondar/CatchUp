@@ -41,7 +41,7 @@ describe("Game Factory", function() {
 		beforeEach(function() {
 			var subject = new GameFactory();
 		
-			player = subject.BuildPlayer();
+			player = subject.BuildPlayer(100,100);
 		});
 		
 		it("Creates a new Game Object", function() {		
@@ -49,8 +49,8 @@ describe("Game Factory", function() {
 		});
 		
 		it("Sets properly it's position", function(){
-			expect(player.Position.x).toBe(15);
-			expect(player.Position.y).not.toBe(undefined);
+			expect(player.Position.x).toBe(50);
+			expect(player.Position.y).toBe(100-30);
 		});
 		
 		it("Makes it as rectangle", function(){

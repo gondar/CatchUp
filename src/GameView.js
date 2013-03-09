@@ -6,8 +6,8 @@ function GameView(gameBoard,width,height){
 	this._height = height || 200;
 }
 
-GameView.prototype.KEYBOARD_LEFT = 37;
-GameView.prototype.KEYBOARD_RIGHT = 39;
+GameView.KEYBOARD_LEFT = 37;
+GameView.KEYBOARD_RIGHT = 39;
 
 GameView.prototype._add = function(name, element) {
 	if (name in this._elementsOnBoard)
@@ -28,10 +28,10 @@ GameView.prototype.CreateFabricInDiv = function(id){
 GameView.prototype.AddKeypressListeners = function(controller) {
 	$(document).keydown({controller: controller}, function(event){
 		var controller = event.data.controller;
-		if (event.which == GameView.prototype.KEYBOARD_LEFT){
+		if (event.which == GameView.KEYBOARD_LEFT){
 			controller.MovePlayerLeft();
 		}		
-		if (event.which == GameView.prototype.KEYBOARD_RIGHT){
+		if (event.which == GameView.KEYBOARD_RIGHT){
 			controller.MovePlayerRight();
 		}
 	})

@@ -18,13 +18,13 @@ describe("GameView", function(){
 		
 		subject.AddKeypressListeners(controller)
 		var key = jQuery.Event("keydown");
-		key.which = GameView.prototype.KEYBOARD_LEFT;
+		key.which = GameView.KEYBOARD_LEFT;
 		$(document).trigger(key);
 		
 		expect(controller.MovePlayerLeft).toHaveBeenCalled();
 	
 		//cleanup
-		$(document).off("keydown");
+		$(document).off();
 	});
 	
 	it("listens for the right keyboard press", function(){	
@@ -34,13 +34,13 @@ describe("GameView", function(){
 		
 		subject.AddKeypressListeners(controller)
 		var key = jQuery.Event("keydown");
-		key.which = GameView.prototype.KEYBOARD_RIGHT;
+		key.which = GameView.KEYBOARD_RIGHT;
 		$(document).trigger(key);
 		
 		expect(controller.MovePlayerRight).toHaveBeenCalled();
 		 
 		//cleanup
-		$(document).off("keydown");
+		$(document).off();
 	});
 	
 	it("adds elements to canvas only once", function(){

@@ -10,7 +10,7 @@ describe("GameController", function(){
 			jasmine.Clock.useMock();
 			gameView = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
 			board = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize"]);
-            gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update"]);
+            gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update","SetModel"]);
             var mockGame = jasmine.createSpyObj("Game",["IsPaused"]);
 			player = {Id:12};
 			subject = new GameController(gameView, board, player, 100, mockGame,gameStartView);
@@ -100,7 +100,7 @@ describe("GameController", function(){
 			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
 			board = jasmine.createSpyObj("GameBoard",["Add"]);
 			game = jasmine.createSpyObj("Game",["RoundFinished"]);
-            var gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update"]);
+            var gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update", "SetModel"]);
 			player = {Id:12};
 			var gameSpeed = 100;
 			subject = new GameController(view, board, player, gameSpeed, game, gameStartView);
@@ -118,4 +118,24 @@ describe("GameController", function(){
 			expect(view.Update.callCount).toEqual(3);//Once in initialize then every 100 miliseconds
 		});
 	});
+
+    describe("When receiving StartGame event", function(){
+       var mockGame;
+       var mockStartGameView;
+       beforeEach(function(){
+           mockGame = {IsPaused:true};
+           mockStartGameView = jasmine.createSpyObj("StartGameView",["Update"]);
+           var subject = new GameController(null,null,null,100,mockGame,mockStartGameView);
+
+           subject.StartGame();
+       });
+
+        it("sets game pause to false", function(){
+            expect(mockGame.IsPaused).toBe(false);
+        });
+
+        it("updates gameStartView", function(){
+            expect(mockStartGameView.Update).toHaveBeenCalled();
+        });
+    });
 });

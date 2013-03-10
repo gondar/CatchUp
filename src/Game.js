@@ -1,4 +1,4 @@
-function Game(board, factory, limit, width, height, playerObjectName, pointsCounter){
+function Game(board, factory, limit, width, height, playerObjectName, pointsCounter, gameTimer){
 	var _board = board;
     var _factory = factory;
     var _fallingObjectIndex = 0;
@@ -9,6 +9,7 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
     var _playerObjectName = playerObjectName;
     var _previousColor = '';
     var _pointsCounter = pointsCounter;
+    var _gameTimer = gameTimer;
 
     function _addFallingObject(fallingObjectString){
         _fallingObjectCount++;
@@ -50,6 +51,7 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
         },
         StartGame: function() {
            this.GameState = Game.STARTED;
+           _gameTimer.Start();
         },
         GameState: Game.PAUSED
     }

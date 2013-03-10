@@ -41,8 +41,8 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
                 return;
             _board.GetPlayer().Collision = false;
             var fallingObjectString = "FallingObject";
-            _moveAndAddFallingObjects(fallingObjectString);
             _handleCollisions(fallingObjectString);
+            _moveAndAddFallingObjects(fallingObjectString);
             if (_fallingObjectCount < _limit)
                 _addFallingObject(fallingObjectString);
             if (_pointsCounter.Points >= 100) {

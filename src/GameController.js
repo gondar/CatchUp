@@ -7,6 +7,7 @@ function GameController(view, gameBoard, player, speed, game, gameStartView, gam
     var _gameStartView = gameStartView;
     var _gameEndView = gameEndView;
     var _fabric;
+    var _timerEventInterval;
 
     function InitializeBoardAndBoardView(playerName, gameDivId, controller) {
         _board.AddPlayer(_player);
@@ -48,7 +49,7 @@ function GameController(view, gameBoard, player, speed, game, gameStartView, gam
         },
         Initialize: function(gameDivId, playerName) {
             var controller = this;
-            setInterval(function() {
+            _timerEventInterval = setInterval(function() {
                 controller.TimerEvent();
             }, _gameSpeed);
             InitializeBoardAndBoardView(playerName, gameDivId, controller);
@@ -69,6 +70,9 @@ function GameController(view, gameBoard, player, speed, game, gameStartView, gam
                 return;
             _game.StartGame();
             _gameStartView.Update();
+        },
+        StopTimerEvent: function(){
+            clearInterval(_timerEventInterval);
         }
     }
 }

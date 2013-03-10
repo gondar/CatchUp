@@ -102,6 +102,7 @@ describe("GameController", function(){
         var gameStartView;
         var gameEndView;
         var playerView;
+        var subject;
 		
 		beforeEach(function() {
 			jasmine.Clock.useMock();
@@ -111,13 +112,16 @@ describe("GameController", function(){
             gameEndView = dependencies.gameEndView;
             view = dependencies.gameView;
             playerView = dependencies.player.GetView();
-            var subject = dependencies.controller;
+            subject = dependencies.controller;
 
 			divId = "#id";
-		
 			subject.Initialize(divId);
-			jasmine.Clock.tick(dependencies.gameSpeed*2+1);
+			jasmine.Clock.tick(dependencies.gameSpeed*2+10);
 		});
+
+        afterEach(function(){
+            subject.StopTimerEvent();
+        });
 		
 		it("it informs game that round has elapsed", function() {
 			expect(game.RoundFinished.callCount).toEqual(2);
@@ -184,6 +188,7 @@ describe("GameController", function(){
 
 function BuildGameControllerAndMockDependencies(){
     var gameView = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
+    gameView.CreateFabricInDiv.andReturn(jasmine.createSpyObj("farbic",["renderAll"]));
     var mockBoard = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize","AddPlayer","GetPlayer"]);
     var gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update","SetModel"]);
     var gameEndView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update","SetModel"]);

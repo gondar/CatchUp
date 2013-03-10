@@ -19,7 +19,6 @@ PointsCounterView.prototype.Update = function(){
 	this._fabric.setText(this._points.toString());
 	var color = "rgb("+(this._points*10).toString()+",100,100)";
 	this._fabric.set({fill: color});
-	console.log(color);
 }
 
 PointsCounterView.prototype.GetFabric = function(){

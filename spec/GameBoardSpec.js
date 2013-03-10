@@ -51,8 +51,23 @@ describe("GameBoard", function() {
 			it("allows to obtain it back",function(){
 				expect(board.Get(object.name)).toEqual(object);
 			});
-		})
-		
+		});
+
+        describe("When added player to a board", function(){
+            var player;
+
+            beforeEach(function(){
+                board = new GameBoard(100, 20);
+                player = {name:"ObjectName"};
+
+                board.AddPlayer(player) ;
+            });
+
+            it("allows to obtain it back",function(){
+                expect(board.GetPlayer()).toEqual(player);
+            });
+        });
+
 		describe("When requested for points counter",function(){
 			var pointsCounter;
 			beforeEach(function(){
@@ -66,18 +81,18 @@ describe("GameBoard", function() {
 		});
 		
 		describe("Finding collisions",function(){
-			describe("When requested list of all collisions for a given object", function(){
+			describe("When requested list of all collisions for a player", function(){
 				var outcome;
 				
 				beforeEach(function(){
 					var collisionDetector = {IsCollision:function(){return true;}}
 					board = new GameBoard(100, 20, collisionDetector);
-					var object1 = {name:"Object1", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
-					var object2 = {name:"Object2", Position:{x:15, y:10}, Dimensions: {Width:10,Height:10}};
-					board.Add(object1.name, object1);
+                    var player = {name:"Player", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
+					var object2 = {name:"Object", Position:{x:15, y:10}, Dimensions: {Width:10,Height:10}};
+					board.AddPlayer(player);
 					board.Add(object2.name, object2);
 				
-					outcome = board.GetCollisions("Object1")
+					outcome = board.GetPlayerCollisions()
 				});
 				
 				it("has only one collision",function(){
@@ -85,7 +100,7 @@ describe("GameBoard", function() {
 				});
 			
 				it("finds all collisions",function(){
-					expect(outcome[0]).toBe("Object2");
+					expect(outcome[0]).toBe("Object");
 				});
 			});
 			
@@ -95,12 +110,12 @@ describe("GameBoard", function() {
 				beforeEach(function(){
 					var collisionDetector = {IsCollision:function(){return false;}}
 					board = new GameBoard(100, 20, collisionDetector);
-					var object1 = {name:"Object1", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
-					var object2 = {name:"Object2", Position:{x:25, y:10}, Dimensions: {Width:10,Height:10}};
-					board.Add(object1.name, object1);
-					board.Add(object2.name, object2);
+                    var player = {name:"Player", Position:{x:10, y:10}, Dimensions: {Width:10,Height:10}};
+                    var object2 = {name:"Object", Position:{x:15, y:10}, Dimensions: {Width:10,Height:10}};
+                    board.AddPlayer(player);
+                    board.Add(object2.name, object2);
 				
-					outcome = board.GetCollisions("Object1")
+					outcome = board.GetPlayerCollisions()
 				});
 				
 				it("returns empty collisions list",function(){
@@ -125,21 +140,21 @@ describe("GameBoard", function() {
 	
 	it("allows to move object right", function(){
 		var subject = new GameBoard();
-		var object = {"Name": "test", "Position": {x:0,y:0}};
-		subject.Add(object.Name, object);
+        var player = {"Position": {x:0	,y:0}};
+        subject.AddPlayer(player);
 		
-		subject.MoveRight(object.Name);
+		subject.MoveRight();
 		
-		expect(object.Position).toEqual({x:10,y:0});
+		expect(player.Position).toEqual({x:10,y:0});
 	});
 	
-	it("allows to move object left", function(){
+	it("allows to move player left", function(){
 		var subject = new GameBoard();
-		var object = {"Name": "test", "Position": {x:10	,y:0}};
-		subject.Add(object.Name, object);
+		var player = {"Position": {x:10	,y:0}};
+		subject.AddPlayer(player);
 		
-		subject.MoveLeft(object.Name);
+		subject.MoveLeft();
 		
-		expect(object.Position).toEqual({x:0,y:0});
+		expect(player.Position).toEqual({x:0,y:0});
 	});
 });

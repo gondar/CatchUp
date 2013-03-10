@@ -19,7 +19,12 @@ GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed, limit, width, hei
 }
 
 GameFactory.prototype.BuildPlayer = function(boardWidth,boardHeight) {
-	return this._BuildGameObjectWithRectangleView(boardWidth/2,boardHeight-30);
+	//return this._BuildGameObjectWithRectangleView(boardWidth/2,boardHeight-30);
+    var gameObject = new GameObject(new PlayerView());
+    gameObject.Position = {x:boardWidth/2, y:boardHeight-30};
+    gameObject.Dimensions.Width = 30;
+    gameObject.Dimensions.Height = 10;
+    return gameObject;
 }
 
 GameFactory.prototype.BuildFallingObject = function(boardWidth) {

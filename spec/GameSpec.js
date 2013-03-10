@@ -91,7 +91,7 @@ describe("Game", function(){
 		});
 		
 		it("verifies collisions",function(){
-			expect(board.GetCollisions).toHaveBeenCalled();
+			expect(board.GetPlayerCollisions).toHaveBeenCalled();
 		});
 	});
 	
@@ -178,7 +178,7 @@ describe("Game", function(){
 			expect(board.Remove).toHaveBeenCalledWith("collision2");
 		});
 		
-		it("adds new object removed object", function(){
+		it("adds new object for each removed object", function(){
 			subject.RoundFinished();
 			expect(board.Add.calls.length).toBe(1);
 		});
@@ -204,15 +204,19 @@ describe("Game", function(){
 		var board = {
 			Add:function(){},
 			MoveDownFallingObjects:function(){},
-			GetCollisions:function(){},
+            GetPlayerCollisions:function(){},
 			Get:function(){},
-			Remove: function(){}
+            GetPlayer:function(){},
+			Remove: function(){},
+            AddPlayer: function(){}
 		};
 		spyOn(board, 'MoveDownFallingObjects').andReturn(result);
 		spyOn(board, 'Add').andReturn(result);
-		spyOn(board, 'GetCollisions').andReturn(collisions);
-		spyOn(board, 'Get').andReturn(player||{Collision:false});
+		spyOn(board, 'GetPlayerCollisions').andReturn(collisions);
+		spyOn(board, 'Get');
 		spyOn(board, 'Remove');
+        spyOn(board, "AddPlayer");
+        spyOn(board, "GetPlayer").andReturn(player || {Collision:false});
 		return board;
 	}
 

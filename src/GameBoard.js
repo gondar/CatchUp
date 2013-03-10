@@ -51,20 +51,39 @@ GameBoard.prototype.GetCollisions = function(name) {
 	return colliding;
 }
 
+GameBoard.prototype.GetPlayer = function(){
+    return this._player;
+}
+
+GameBoard.prototype.AddPlayer = function(player) {
+    this._player = player;
+}
+
+GameBoard.prototype.GetPlayerCollisions = function(){
+    var colliding = []
+    for (var key in this.elements) {
+        var element = this.elements[key];
+        if (this._collisionDetector.IsCollision(this._player, element)) {
+            colliding.push(key);
+        }
+    }
+    return colliding;
+}
+
 GameBoard.prototype.Remove = function(name) {
 	delete this.elements[name];
 }
 
-GameBoard.prototype.MoveRight = function(name) {
-	this._Move(name, 10);
+GameBoard.prototype.MoveRight = function() {
+	this._Move(10);
 }
 
-GameBoard.prototype.MoveLeft = function(name) {
-	this._Move(name, -10);
+GameBoard.prototype.MoveLeft = function() {
+	this._Move(-10);
 }
 
-GameBoard.prototype._Move = function(name, direction){
-	var currentPosition = this.elements[name].Position.x;
+GameBoard.prototype._Move = function(direction){
+	var currentPosition = this._player.Position.x;
 	var newPosition = currentPosition + direction;
-	this.elements[name].Position.x = newPosition;
+	this._player.Position.x = newPosition;
 }

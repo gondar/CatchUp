@@ -52,10 +52,6 @@ describe("Game Factory", function() {
 			expect(player.Position.x).toBe(50);
 			expect(player.Position.y).toBe(100-30);
 		});
-		
-		it("Makes it as rectangle", function(){
-			expect(player.GetView() instanceof RectangleView).toBe(true);
-		});
 	});
 	
 	describe("When creating many falling objects", function() {

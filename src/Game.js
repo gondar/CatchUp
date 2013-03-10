@@ -19,11 +19,10 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
     }
 
     function _handleCollisions(fallingObjectString) {
-        var collisions = _board.GetCollisions(_playerObjectName);
+        var collisions = _board.GetPlayerCollisions();
         if (collisions.length != 0) {
-            _board.Get(_playerObjectName).Collision = true;
-        }
-        ;
+            _board.GetPlayer().Collision = true;
+        };
         for (var element in collisions) {
             _fallingObjectCount--;
             _board.Remove(collisions[element]);
@@ -40,7 +39,7 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
         RoundFinished: function(){
             if (this.GameState != Game.STARTED)
                 return;
-            _board.Get(_playerObjectName).Collision = false;
+            _board.GetPlayer().Collision = false;
             var fallingObjectString = "FallingObject";
             _moveAndAddFallingObjects(fallingObjectString);
             _handleCollisions(fallingObjectString);

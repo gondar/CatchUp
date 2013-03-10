@@ -28,6 +28,18 @@ function GameEndView(){
     var _canvas = null;
     var _updated = false;
 
+    function _bringToFront() {
+        _canvas.bringToFront(_fabricBackground);
+        _canvas.bringToFront(_fabricText);
+        _canvas.bringToFront(_timeText);
+    }
+
+    function _showObjects() {
+        _timeText.animate({opacity: 1});
+        _fabricText.animate({opacity: 1});
+        _fabricBackground.opacity = 0.96;
+    }
+
     return {
         AddToFabric: function(canvas) {
             _canvas = canvas;
@@ -44,12 +56,8 @@ function GameEndView(){
             return;
            if (_model.GameState == Game.FINISHED) {
                _timeText.text = "Time: "+ (_model.GetTimer().GetTime()/1000).toString()+"s";
-               _timeText.animate({opacity:1});
-               _fabricText.animate({opacity:1});
-               _fabricBackground.opacity = 0.96;
-               _canvas.bringToFront(_fabricBackground);
-               _canvas.bringToFront(_fabricText);
-               _canvas.bringToFront(_timeText);
+               _showObjects();
+               _bringToFront();
                _canvas.renderAll();
                return;
            }

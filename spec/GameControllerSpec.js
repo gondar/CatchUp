@@ -2,18 +2,20 @@ describe("GameController", function(){
 	describe("During Initialize", function() {
 		var gameView;
         var gameStartView;
+        var gameEndView;
 		var board;
 		var player;
 		var subject;
 		
 		beforeEach(function() {
 			jasmine.Clock.useMock();
-			gameView = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
-			board = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize"]);
-            gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update","SetModel"]);
-            var mockGame = jasmine.createSpyObj("Game",["IsPaused"]);
-			player = {Id:12};
-			subject = new GameController(gameView, board, player, 100, mockGame,gameStartView);
+            var deps = BuildGameControllerAndMockDependencies();
+            board = deps.board;
+            gameView = deps.gameView;
+            gameStartView = deps.gameStartView;
+            gameEndView = deps.gameEndView;
+            player = deps.player;
+            subject = deps.controller;
 			divId = "#id";
 		
 			subject.Initialize(divId,"player");
@@ -25,13 +27,7 @@ describe("GameController", function(){
 		
 		it("creates fabric in div", function(){
 			expect(gameView.CreateFabricInDiv).toHaveBeenCalledWith("#id");
-		});
-		
-		it("initializes keyboard listeners", function() {
 			expect(gameView.AddKeypressListeners).toHaveBeenCalledWith(subject);
-		});
-		
-		it("updates board view", function() {
 			expect(gameView.Update).toHaveBeenCalled();
 		});
 
@@ -39,6 +35,12 @@ describe("GameController", function(){
           expect(gameStartView.AddToFabric).toHaveBeenCalled();
           expect(gameStartView.AddKeypressListeners).toHaveBeenCalled();
           expect(gameStartView.Update).toHaveBeenCalled();
+        });
+
+        it("initializes game end view", function() {
+           expect(gameEndView.AddToFabric).toHaveBeenCalled();
+           expect(gameEndView.AddKeypressListeners).toHaveBeenCalled();
+           expect(gameEndView.Update).toHaveBeenCalled();
         });
 	});
 	
@@ -90,24 +92,23 @@ describe("GameController", function(){
 	
 	describe("When receives timer event every 100 miliseconds", function() {
 		var view;
-		var board;
-		var player;
-		var subject;
 		var game;
+        var gameStartView;
+        var gameEndView;
 		
 		beforeEach(function() {
 			jasmine.Clock.useMock();
-			view = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
-			board = jasmine.createSpyObj("GameBoard",["Add"]);
-			game = jasmine.createSpyObj("Game",["RoundFinished"]);
-            var gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update", "SetModel"]);
-			player = {Id:12};
-			var gameSpeed = 100;
-			subject = new GameController(view, board, player, gameSpeed, game, gameStartView);
+            var dependencies = BuildGameControllerAndMockDependencies();
+            game = dependencies.game;
+            gameStartView = dependencies.gameStartView;
+            gameEndView = dependencies.gameEndView;
+            view = dependencies.gameView;
+            var subject = dependencies.controller;
+
 			divId = "#id";
 		
 			subject.Initialize(divId);
-			jasmine.Clock.tick(gameSpeed*2+1);
+			jasmine.Clock.tick(dependencies.gameSpeed*2+1);
 		});
 		
 		it("it informs game that round has elapsed", function() {
@@ -117,6 +118,14 @@ describe("GameController", function(){
 		it("it updates board view", function() {
 			expect(view.Update.callCount).toEqual(3);//Once in initialize then every 100 miliseconds
 		});
+
+        it("updates game start view", function(){
+            expect(gameStartView.Update.callCount).toEqual(3);
+        });
+
+        it("updates game end view", function(){
+           expect(gameEndView.Update.callCount).toEqual(3);
+        });
 	});
 
     describe("When receiving StartGame event", function(){
@@ -160,3 +169,24 @@ describe("GameController", function(){
         });
     });
 });
+
+function BuildGameControllerAndMockDependencies(){
+    var gameView = jasmine.createSpyObj("GameView",["CreateFabricInDiv", "AddKeypressListeners", "Update"]);
+    var mockBoard = jasmine.createSpyObj("GameBoard",["Add","TestDuringInitialize"]);
+    var gameStartView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update","SetModel"]);
+    var gameEndView = jasmine.createSpyObj("GameStartView",["AddToFabric","AddKeypressListeners","Update","SetModel"]);
+    var mockGame = jasmine.createSpyObj("Game",["IsPaused","RoundFinished"]);
+    var player = {Id:12};
+    var gameSpeed = 100;
+    var controller = new GameController(gameView, mockBoard, player, gameSpeed, mockGame,gameStartView, gameEndView);
+    return {
+        board: mockBoard,
+        gameView: gameView,
+        gameStartView: gameStartView,
+        gameEndView: gameEndView,
+        game: mockGame,
+        player: player,
+        gameSpeed: gameSpeed,
+        controller: controller
+    };
+}

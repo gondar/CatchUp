@@ -1,10 +1,11 @@
-function GameController(view, gameBoard, player, speed, game, startGameView){
+function GameController(view, gameBoard, player, speed, game, gameStartView, gameEndView){
 	var _board = gameBoard;
 	var _player = player;
 	var _boardView = view;
 	var _gameSpeed = speed;
 	var _game = game;
-    var _startGameView = startGameView;
+    var _gameStartView = gameStartView;
+    var _gameEndView = gameEndView;
     var _fabric;
 
     function InitializeBoardAndBoardView(playerName, gameDivId, controller) {
@@ -15,17 +16,25 @@ function GameController(view, gameBoard, player, speed, game, startGameView){
     }
 
     function InitializeGameStart(controller) {
-        _startGameView.SetModel(_game);
-        _startGameView.AddToFabric(_fabric);
-        _startGameView.AddKeypressListeners(controller);
-        _startGameView.Update();
+        _gameStartView.SetModel(_game);
+        _gameStartView.AddToFabric(_fabric);
+        _gameStartView.AddKeypressListeners(controller);
+        _gameStartView.Update();
+    }
+
+    function InittializeGameEnd(controller) {
+        _gameEndView.SetModel(_game);
+        _gameEndView.AddToFabric(_fabric);
+        _gameEndView.AddKeypressListeners(controller);
+        _gameEndView.Update();
     }
 
     return {
         TimerEvent: function() {
             _game.RoundFinished();
             _boardView.Update();
-            _startGameView.Update();
+            _gameStartView.Update();
+            _gameEndView.Update();
         },
         Initialize: function(gameDivId, playerName) {
             var controller = this;
@@ -34,7 +43,7 @@ function GameController(view, gameBoard, player, speed, game, startGameView){
             }, _gameSpeed);
             InitializeBoardAndBoardView(playerName, gameDivId, controller);
             InitializeGameStart(controller);
-            //_game.IsPaused = false;
+            InittializeGameEnd(controller);
         },
         MovePlayerLeft: function() {
             _board.MoveLeft("player");
@@ -48,7 +57,7 @@ function GameController(view, gameBoard, player, speed, game, startGameView){
             if (_game.GameState != Game.PAUSED)
                 return;
             _game.StartGame();
-            _startGameView.Update();
+            _gameStartView.Update();
         }
     }
 }

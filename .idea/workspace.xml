@@ -2,28 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.js" afterPath="$PROJECT_DIR$/src/Game.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameEndView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/GameEndViewSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.html" afterPath="$PROJECT_DIR$/Game.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameController.js" afterPath="$PROJECT_DIR$/src/GameController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameControllerSpec.js" afterPath="$PROJECT_DIR$/spec/GameControllerSpec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameSpec.js" afterPath="$PROJECT_DIR$/spec/GameSpec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameStartView.js" afterPath="$PROJECT_DIR$/src/GameStartView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameFactory.js" afterPath="$PROJECT_DIR$/src/GameFactory.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PointsCounter.js" afterPath="$PROJECT_DIR$/src/PointsCounter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CatchUp.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362842900796" ignored="false" />
     <file path="/Game.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362855165031" ignored="false" />
     <file path="/GameSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362854285843" ignored="false" />
-    <file path="/GameController.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362855299203" ignored="false" />
-    <file path="/GameControllerSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362855713765" ignored="false" />
+    <file path="/GameController.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362876223281" ignored="false" />
+    <file path="/GameControllerSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362875449328" ignored="false" />
     <file path="/*.regexp" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362844785031" ignored="false" />
     <file path="/fragment.js2" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362844806453" ignored="false" />
     <file path="/GameView.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362845505468" ignored="false" />
     <file path="/GameStartView.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362854430375" ignored="false" />
     <file path="/GameStartViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362851811796" ignored="false" />
-    <file path="/GameFactory.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362852246484" ignored="false" />
-    <file path="/Game.html" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362846480218" ignored="false" />
+    <file path="/GameFactory.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362875789531" ignored="false" />
+    <file path="/Game.html" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362875804671" ignored="false" />
     <file path="/fragment.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362853934250" ignored="false" />
+    <file path="/GameEndView.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362876646375" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,37 +46,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameSpec.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/GameSpec.js">
+      <file leaf-file-name="GameEndView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameEndView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="572" selection-end="589" vertical-scroll-proportion="-3.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jasmine.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/jasmine-1.3.1/jasmine.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1069" column="0" selection-start="28214" selection-end="28214" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameControllerSpec.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/GameControllerSpec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="55" selection-start="4906" selection-end="4906" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameController.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="30" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+            <state line="33" column="48" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,25 +58,16 @@
       <file leaf-file-name="GameStartView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameStartView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="51" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+            <state line="41" column="61" selection-start="1359" selection-end="1389" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Game.js">
+      <file leaf-file-name="GameController.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GameController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="11" selection-start="1889" selection-end="1889" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointsCounter.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PointsCounter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="19" selection-start="46" selection-end="46" vertical-scroll-proportion="0.055016182">
+            <state line="36" column="12" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.20795107">
               <folding />
             </state>
           </provider>
@@ -124,22 +91,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/configs/dsfsd.jade" />
-        <option value="$PROJECT_DIR$/conf/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/lib/JasmineAdapter.js" />
         <option value="$PROJECT_DIR$/jsTestDriver.conf" />
-        <option value="$PROJECT_DIR$/Game.html" />
         <option value="$PROJECT_DIR$/src/GameView.js" />
         <option value="$PROJECT_DIR$/spec/GameStartViewSpec.js" />
         <option value="$PROJECT_DIR$/spec/GameViewSpec.js" />
-        <option value="$PROJECT_DIR$/src/GameFactory.js" />
         <option value="$PROJECT_DIR$/spec/GameFactorySpec.js" />
         <option value="$PROJECT_DIR$/src/GameStartView.js" />
         <option value="$PROJECT_DIR$/spec/GameSpec.js" />
         <option value="$PROJECT_DIR$/src/Game.js" />
-        <option value="$PROJECT_DIR$/src/GameController.js" />
         <option value="$PROJECT_DIR$/spec/GameControllerSpec.js" />
+        <option value="$PROJECT_DIR$/spec/GameEndViewSpec.js" />
         <option value="$PROJECT_DIR$/src/PointsCounter.js" />
+        <option value="$PROJECT_DIR$/src/GameFactory.js" />
+        <option value="$PROJECT_DIR$/Game.html" />
+        <option value="$PROJECT_DIR$/src/GameEndView.js" />
+        <option value="$PROJECT_DIR$/src/GameController.js" />
       </list>
     </option>
   </component>
@@ -256,38 +223,16 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec" />
+      <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mbazydlo\Documents\GitHub\CatchUp" />
       <recent name="C:\Users\mbazydlo\Documents\GitHub\CatchUp\conf" />
     </key>
   </component>
-  <component name="RunManager" selected="JsTestDriver.When player gets 100 points.">
-    <configuration default="false" name="GameView.creates fabric" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
-      <setting name="configLocationType" value="TEST_METHOD" />
-      <setting name="configType" value="FILE_PATH" />
-      <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
-      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameViewSpec.js" />
-      <setting name="testCase" value="GameView" />
-      <setting name="testMethod" value="creates fabric" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
-      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
-      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="When found collision with player.adds new object for each removed object" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
-      <setting name="configLocationType" value="TEST_METHOD" />
-      <setting name="configType" value="FILE_PATH" />
-      <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
-      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameSpec.js" />
-      <setting name="testCase" value="When found collision with player" />
-      <setting name="testMethod" value="adds new object for each removed object" />
-      <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
-      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
-      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JsTestDriver.When receives timer event every 100 miliseconds.it informs game that round has elapsed">
     <configuration default="false" name="When receiving StartGame event.updates gameStartView" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
       <setting name="configLocationType" value="TEST_METHOD" />
       <setting name="configType" value="FILE_PATH" />
@@ -330,6 +275,31 @@
       <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="When receives timer event every 100 miliseconds" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_CASE" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
+      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameControllerSpec.js" />
+      <setting name="testCase" value="When receives timer event every 100 miliseconds" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="When receives timer event every 100 miliseconds.it informs game that round has elapsed" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver" temporary="true">
+      <setting name="configLocationType" value="TEST_METHOD" />
+      <setting name="configType" value="FILE_PATH" />
+      <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
+      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameControllerSpec.js" />
+      <setting name="testCase" value="When receives timer event every 100 miliseconds" />
+      <setting name="testMethod" value="it informs game that round has elapsed" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <RunnerSettings RunnerId="JstdDebugProgramRunner" />
+      <ConfigurationWrapper RunnerId="JstdDebugProgramRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -365,19 +335,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JsTestDriver.Tests" />
-      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.GameView.creates fabric" />
-      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.When found collision with player.adds new object for each removed object" />
-      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.When receiving StartGame event.updates gameStartView" />
-      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points..finishes game" />
-      <item index="5" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points." />
+      <item index="1" class="java.lang.String" itemvalue="JsTestDriver.When receiving StartGame event.updates gameStartView" />
+      <item index="2" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points..finishes game" />
+      <item index="3" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points." />
+      <item index="4" class="java.lang.String" itemvalue="JsTestDriver.When receives timer event every 100 miliseconds" />
+      <item index="5" class="java.lang.String" itemvalue="JsTestDriver.When receives timer event every 100 miliseconds.it informs game that round has elapsed" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points." />
-        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points..finishes game" />
-        <item index="2" class="java.lang.String" itemvalue="JsTestDriver.When receiving StartGame event.updates gameStartView" />
-        <item index="3" class="java.lang.String" itemvalue="JsTestDriver.When found collision with player.adds new object for each removed object" />
-        <item index="4" class="java.lang.String" itemvalue="JsTestDriver.GameView.creates fabric" />
+        <item index="1" class="java.lang.String" itemvalue="JsTestDriver.When receives timer event every 100 miliseconds.it informs game that round has elapsed" />
+        <item index="2" class="java.lang.String" itemvalue="JsTestDriver.When receives timer event every 100 miliseconds" />
+        <item index="3" class="java.lang.String" itemvalue="JsTestDriver.When player gets 100 points..finishes game" />
+        <item index="4" class="java.lang.String" itemvalue="JsTestDriver.When receiving StartGame event.updates gameStartView" />
       </list>
     </recent_temporary>
   </component>
@@ -433,14 +403,14 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32724252" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.38325992" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21777222" sideWeight="0.5913621" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.49812266" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21777222" sideWeight="0.6079734" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.5744681" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.23788546" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.4931164" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40863788" sideWeight="0.5744681" order="2" side_tool="false" content_ui="tabs" x="6" y="441" width="683" height="273" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40863788" sideWeight="0.41677096" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39202657" sideWeight="0.5744681" order="2" side_tool="false" content_ui="tabs" x="6" y="441" width="683" height="273" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.41677096" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -509,31 +479,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="10" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameBoard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="2" selection-start="1024" selection-end="1024" vertical-scroll-proportion="-7.1923075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PointsCounterView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="30" selection-end="161" vertical-scroll-proportion="0.049418606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RectangleView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="26" selection-end="134" vertical-scroll-proportion="0.028911564">
@@ -544,13 +493,6 @@
     <entry file="file://$PROJECT_DIR$/src/GameView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="36" selection-start="1009" selection-end="1009" vertical-scroll-proportion="1.5789474">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/GameStartViewSpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="46" selection-start="847" selection-end="847" vertical-scroll-proportion="0.42296073">
           <folding />
         </state>
       </provider>
@@ -569,30 +511,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/jasmine-1.3.1/jasmine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1069" column="0" selection-start="28214" selection-end="28214" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="62" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/GameSpec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="32" selection-start="572" selection-end="589" vertical-scroll-proportion="-3.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameStartView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="51" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -604,23 +525,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameController.js">
+    <entry file="file://$PROJECT_DIR$/lib/jasmine-1.3.1/jasmine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="30" selection-start="1651" selection-end="1651" vertical-scroll-proportion="0.0">
+        <state line="1068" column="0" selection-start="28198" selection-end="28198" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/GameControllerSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="55" selection-start="4906" selection-end="4906" vertical-scroll-proportion="0.0">
+        <state line="126" column="59" selection-start="3898" selection-end="3898" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/GameStartViewSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="46" selection-start="847" selection-end="847" vertical-scroll-proportion="1.3333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PointsCounter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="19" selection-start="46" selection-end="46" vertical-scroll-proportion="0.055016182">
+        <state line="1" column="20" selection-start="47" selection-end="47" vertical-scroll-proportion="0.05">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="116" selection-start="704" selection-end="704" vertical-scroll-proportion="0.36391437">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="56" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.10828026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/GameEndViewSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameStartView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="61" selection-start="1359" selection-end="1389" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameEndView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="48" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="12" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.20795107">
           <folding />
         </state>
       </provider>

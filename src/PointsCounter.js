@@ -1,5 +1,5 @@
 function PointsCounter(view){
-	var _points = 0;
+	var _points = 99;
 	var _view = view;
 	
 	var self = {	

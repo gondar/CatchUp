@@ -13,7 +13,7 @@ GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed, limit, width, hei
 	var player = this.BuildPlayer(width,height);
 	var playerObjectName = "player";
 	var game = new Game(board, this, limit, width, height, playerObjectName, pointsCouner);
-	var controller = new GameController(view, board, player, gameSpeed, game, new GameStartView());
+	var controller = new GameController(view, board, player, gameSpeed, game, new GameStartView(), new GameEndView());
 	controller.Initialize(gameDiv, playerObjectName);
 	return controller;
 }

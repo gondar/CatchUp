@@ -46,12 +46,17 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
             _handleCollisions(fallingObjectString);
             if (_fallingObjectCount < _limit)
                 _addFallingObject(fallingObjectString);
-            if (_pointsCounter.Points >= 100)
+            if (_pointsCounter.Points >= 100) {
                 this.GameState = Game.FINISHED;
+                _gameTimer.Stop();
+            }
         },
         StartGame: function() {
            this.GameState = Game.STARTED;
            _gameTimer.Start();
+        },
+        GetTimer: function() {
+            return _gameTimer;
         },
         GameState: Game.PAUSED
     }

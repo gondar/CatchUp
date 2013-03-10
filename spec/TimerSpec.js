@@ -1,8 +1,10 @@
 describe("GameTimer", function(){
    describe("When counting time", function(){
        var outcome;
+       var subject;
+
        beforeEach(function(){
-           var subject = new GameTimer();
+           subject = new GameTimer();
            subject.Start();
            var date = new Date();
            while(new Date().getTime() - date.getTime() < 300)
@@ -14,6 +16,10 @@ describe("GameTimer", function(){
 
        it("returns valid time when stopped",function(){
            expect(outcome).toBe(300);
+       });
+
+       it("keeps previous time", function(){
+          expect(subject.GetTime()).toBe(300);
        });
    });
 });

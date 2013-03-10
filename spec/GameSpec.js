@@ -38,10 +38,12 @@ describe("Game", function(){
     describe("When player gets 100 points.", function(){
         var subject;
         var board;
+        var mockTimer;
         beforeEach(function(){
            var deps = BuildGameObjectAndDependencies({pointsCounter:{Points:100}});
            board = deps.board;
            subject = deps.game;
+            mockTimer = deps.gameTimer;
            subject.StartGame();
 
            subject.RoundFinished();
@@ -56,6 +58,10 @@ describe("Game", function(){
             subject.RoundFinished();
             expect(board.MoveDownFallingObjects.callCount).toBe(1);
         })
+
+        it("stops game timer", function(){
+           expect(mockTimer.Stop).toHaveBeenCalled();
+        });
     });
 
     describe("when round is finished", function() {
@@ -177,6 +183,21 @@ describe("Game", function(){
 			expect(board.Add.calls.length).toBe(1);
 		});
 	});
+    describe("When game timer is requested", function(){
+        var outcome;
+        var mockTimer;
+        beforeEach(function(){
+            var deps = BuildGameObjectAndDependencies();
+            mockTimer = deps.gameTimer;
+            var subject = deps.game;
+
+            outcome = subject.GetTimer();
+        });
+
+        it("Valid timer is returned", function(){
+           expect(outcome).toBe(mockTimer);
+        });
+    });
 });
 
 	function buildBoard(result,collisions,player){

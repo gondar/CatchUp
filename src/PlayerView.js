@@ -14,7 +14,7 @@ function PlayerView(){
         if (_fabric != null)
             _canvas.add(_fabric);
     }
-    fabric.Image.fromURL("./img/1.png", function(img){
+    fabric.Image.fromURL("https://raw.github.com/gondar/CatchUp/master/img/1.png", function(img){
         _fabric = img;
         if (_canvas != null)
             _addToCanvas();
@@ -33,7 +33,6 @@ function PlayerView(){
             _fabric.set({left: _model.Position.x, top: _model.Position.y});
             _fabric.scaleToWidth(_model.Dimensions.Width);
             _model.Dimensions.Height = _fabric.height;
-            //_fabric.set({width: _model.Dimensions.Width, height: _model.Dimensions.Height});
             if (_color > 1){
                 _color -=1;
                 _fabric.set({fill: "#"+_color+"c1c1c"});

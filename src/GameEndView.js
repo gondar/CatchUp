@@ -3,8 +3,8 @@ function GameEndView(){
         left: 0,
         top: 0,
         fill: '#ffffff',
-        width: 1000,
-        height: 1000,
+        width: 4048,
+        height: 2048,
         selectable:false,
         opacity: 0
     });

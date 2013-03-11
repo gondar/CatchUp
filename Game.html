@@ -23,11 +23,12 @@
   <script type="text/javascript" src="src/PlayerView.js"></script>
   <script type="text/javascript">
   $(function() {
-		new GameFactory().BuildGame("#Game",100,4);
+		new GameFactory().BuildGame("#Game",100,4,window.innerWidth-20);
 	});
   </script>
 </head>
 <body>
+
 <div id="Game">
 </div>
 </body>

@@ -3,8 +3,8 @@ function GameStartView(){
         left: 0,
         top: 0,
         fill: '#ffffff',
-        width: 1000,
-        height: 1000,
+        width: 4048,
+        height: 2048,
         opacity: 0.96
     });
     var _fabricText = new fabric.Text("Press right or left arrow key to start a game...", {

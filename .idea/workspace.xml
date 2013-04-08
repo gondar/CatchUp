@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\CalculatorSpec.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\Calculator.js" afterPath="" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\CollisionDetector.js" afterPath="$PROJECT_DIR$/src/GameModel/CollisionDetector.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\Game.js" afterPath="$PROJECT_DIR$/src/GameModel/Game.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameBoard.js" afterPath="$PROJECT_DIR$/src/GameModel/GameBoard.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameEndView.js" afterPath="$PROJECT_DIR$/src/View/GameEndView.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameObject.js" afterPath="$PROJECT_DIR$/src/GameModel/GameObject.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameStartView.js" afterPath="$PROJECT_DIR$/src/View/GameStartView.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameTimer.js" afterPath="$PROJECT_DIR$/src/GameModel/GameTimer.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameView.js" afterPath="$PROJECT_DIR$/src/View/GameView.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\PlayerView.js" afterPath="$PROJECT_DIR$/src/View/PlayerView.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\PointsCounter.js" afterPath="$PROJECT_DIR$/src/GameModel/PointsCounter.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\PointsCounterView.js" afterPath="$PROJECT_DIR$/src/View/PointsCounterView.js" />
-      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\RectangleView.js" afterPath="$PROJECT_DIR$/src/View/RectangleView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.html" afterPath="$PROJECT_DIR$/Game.html" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\CollisionDetectorSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/CollisionDetectorSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameBoardSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/GameBoardSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameEndViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/GameEndViewSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameObjectSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/GameSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameStartViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/GameStartViewSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/GameViewSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\PointsCounterSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/PointsCounterSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\PointsCounterViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/PointsCounterViewSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\RectangleViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
+      <change type="MOVED" beforePath="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\TimerSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/PlayerView.js" afterPath="$PROJECT_DIR$/src/View/PlayerView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpecRunner.html" afterPath="$PROJECT_DIR$/SpecRunner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CatchUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,28 +61,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Game.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="11" selection-start="1533" selection-end="1533" vertical-scroll-proportion="-12.153846">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameStartView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/GameStartView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="17" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameController.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
+            <state line="43" column="25" selection-start="1381" selection-end="1414" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,7 +73,25 @@
       <file leaf-file-name="PlayerView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="75" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFactory.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.9946667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="73" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -104,16 +100,7 @@
       <file leaf-file-name="GameView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/GameView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="53" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameFactory.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+            <state line="40" column="19" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,16 +127,25 @@
       <file leaf-file-name="PointsCounter.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameModel/PointsCounter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="5" column="18" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameBoard.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GameModel/GameBoard.js">
+      <file leaf-file-name="GameStartView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/GameStartView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+            <state line="6" column="17" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameObject.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/PointsCounterView.js" />
         <option value="$PROJECT_DIR$/spec/GameFactorySpec.js" />
         <option value="$PROJECT_DIR$/spec/PlayerViewSpec.js" />
         <option value="$PROJECT_DIR$/spec/GameSpec.js" />
@@ -189,6 +184,7 @@
         <option value="$PROJECT_DIR$/src/PlayerView.js" />
         <option value="$PROJECT_DIR$/Game.html" />
         <option value="$PROJECT_DIR$/src/GameBoard.js" />
+        <option value="$PROJECT_DIR$/src/View/PlayerView.js" />
       </list>
     </option>
   </component>
@@ -290,6 +286,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameModel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CatchUp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="GameModel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -314,10 +378,11 @@
       <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\GameModel" />
+      <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\spec\View" />
       <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\GameModel" />
       <recent name="C:\Documents and Settings\gondar\Pulpit\src\javascript\CatchUp\src\View" />
       <recent name="C:\Users\mbazydlo\Documents\GitHub\CatchUp" />
-      <recent name="C:\Users\mbazydlo\Documents\GitHub\CatchUp\conf" />
     </key>
   </component>
   <component name="RunManager" selected="JsTestDriver.Tests">
@@ -338,7 +403,7 @@
       <setting name="configLocationType" value="TEST_METHOD" />
       <setting name="configType" value="FILE_PATH" />
       <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
-      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameSpec.js" />
+      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameModel/GameSpec.js" />
       <setting name="testCase" value="When player gets 100 points." />
       <setting name="testMethod" value="finishes game" />
       <setting name="serverType" value="INTERNAL" />
@@ -353,7 +418,7 @@
       <setting name="configLocationType" value="TEST_CASE" />
       <setting name="configType" value="FILE_PATH" />
       <setting name="settingsFile" value="$PROJECT_DIR$/jsTestDriver.conf" />
-      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameSpec.js" />
+      <setting name="jsFile" value="$PROJECT_DIR$/spec/GameModel/GameSpec.js" />
       <setting name="testCase" value="When player gets 100 points." />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
@@ -493,7 +558,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32695374" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.38325992" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16070008" sideWeight="0.67304623" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39712918" sideWeight="0.57438344" order="3" side_tool="false" content_ui="tabs" />
@@ -573,11 +638,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/GameViewSpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="8" selection-start="4394" selection-end="4394" vertical-scroll-proportion="0.45639536" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameModel/CollisionDetector.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -595,37 +655,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="26" selection-end="134" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="11" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GameView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="53" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/GameStartView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="17" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="75" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -637,16 +669,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameController.js">
+    <entry file="file://$PROJECT_DIR$/src/GameModel/GameBoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
+        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+    <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="73" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -654,6 +693,27 @@
     <entry file="file://$PROJECT_DIR$/src/GameModel/Game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="54" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="25" selection-start="1381" selection-end="1414" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/GameView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="19" selection-start="1186" selection-end="1186" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -667,14 +727,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameModel/PointsCounter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="5" column="18" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameModel/GameBoard.js">
+    <entry file="file://$PROJECT_DIR$/src/View/GameStartView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+        <state line="6" column="17" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.9946667">
           <folding />
         </state>
       </provider>

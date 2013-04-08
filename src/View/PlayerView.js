@@ -1,11 +1,4 @@
 function PlayerView(){
-//    var _fabric = new fabric.Rect({
-//        left: 100,
-//        top: 100,
-//        fill: '#000000',
-//        width: 30,
-//        height: 10
-//    });
     var _fabric = null;
     var _color = 0;
     var _model;

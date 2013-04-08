@@ -7,20 +7,20 @@
   <script type="text/javascript" src="lib/jquery-1.8.3.js"></script>  
   <script type="text/javascript" src="lib/fabric_0.9.15.min.js"></script>
   <!-- include source files here... -->
-  <script type="text/javascript" src="src/GameBoard.js"></script>  
-  <script type="text/javascript" src="src/GameObject.js"></script>  
-  <script type="text/javascript" src="src/GameView.js"></script>  
-  <script type="text/javascript" src="src/RectangleView.js"></script>
+  <script type="text/javascript" src="src/GameModel/GameBoard.js"></script>
+  <script type="text/javascript" src="src/GameModel/GameObject.js"></script>
+  <script type="text/javascript" src="src/View/GameView.js"></script>
+  <script type="text/javascript" src="src/View/RectangleView.js"></script>
   <script type="text/javascript" src="src/GameController.js"></script>
   <script type="text/javascript" src="src/GameFactory.js"></script>
-  <script type="text/javascript" src="src/Game.js"></script>
-  <script type="text/javascript" src="src/CollisionDetector.js"></script>
-  <script type="text/javascript" src="src/PointsCounterView.js"></script>
-  <script type="text/javascript" src="src/PointsCounter.js"></script>
-  <script type="text/javascript" src="src/GameStartView.js"></script>
-  <script type="text/javascript" src="src/GameEndView.js"></script>
-  <script type="text/javascript" src="src/GameTimer.js"></script>
-  <script type="text/javascript" src="src/PlayerView.js"></script>
+  <script type="text/javascript" src="src/GameModel/Game.js"></script>
+  <script type="text/javascript" src="src/GameModel/CollisionDetector.js"></script>
+  <script type="text/javascript" src="src/View/PointsCounterView.js"></script>
+  <script type="text/javascript" src="src/GameModel/PointsCounter.js"></script>
+  <script type="text/javascript" src="src/View/GameStartView.js"></script>
+  <script type="text/javascript" src="src/View/GameEndView.js"></script>
+  <script type="text/javascript" src="src/GameModel/GameTimer.js"></script>
+  <script type="text/javascript" src="src/View/PlayerView.js"></script>
   <script type="text/javascript">
   $(function() {
 		new GameFactory().BuildGame("#Game",100,4,window.innerWidth-20, window.innerHeight/2);

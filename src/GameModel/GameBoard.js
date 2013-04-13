@@ -37,20 +37,6 @@ GameBoard.prototype.MoveDownFallingObjects = function(name) {
 	return removed;
 }
 
-GameBoard.prototype.GetCollisions = function(name) {
-	var object = this.elements[name];
-	var colliding = []
-	for (var key in this.elements) {
-		if (key == name)
-			continue;
-		var element = this.elements[key];
-		if (this._collisionDetector.IsCollision(object,element)) {
-			colliding.push(key);
-		}
-	}
-	return colliding;
-}
-
 GameBoard.prototype.GetPlayer = function(){
     return this._player;
 }

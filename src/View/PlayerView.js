@@ -1,17 +1,17 @@
 function PlayerView(){
-    var _fabric = null;
+    var _fabric = 	new fabric.Rect({
+        fill: '#110022',
+        originX: 'left',
+        originY: 'top'
+    });
     var _color = 0;
     var _model;
     var _canvas = null;
     function _addToCanvas(){
-        if (_fabric != null)
+        if (_fabric != null) {
             _canvas.add(_fabric);
+        }
     }
-    fabric.Image.fromURL("https://raw.github.com/gondar/CatchUp/master/img/1.png", function(img){
-        _fabric = img;
-        if (_canvas != null)
-            _addToCanvas();
-    });
 
     return {
         AddToFabric: function(canvas) {
@@ -23,11 +23,10 @@ function PlayerView(){
         Update: function(){
             if (_fabric == null)
                 return;
-            _fabric.set({left: _model.Position.x, top: _model.Position.y});
-            _fabric.scaleToWidth(_model.Dimensions.Width);
-            _model.Dimensions.Height = _fabric.height;
+            _fabric.set({left: _model.Position.x+_fabric.width/2, top: _model.Position.y-_fabric.height/2});
+            _fabric.set({width: _model.Dimensions.Width, height: _model.Dimensions.Height});
             if (_model.Collision) {
-                _fabric.animate({angle:360});
+                _fabric.animate({color:'#ff0000'});
             }
         },
         SetModel: function(model){

@@ -20,9 +20,9 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
 
     function _handleCollisions(fallingObjectString) {
         var collisions = _board.GetPlayerCollisions();
-        if (collisions.length != 0) {
+        if (collisions.length == 0)
+            return;
             _board.GetPlayer().Collision = true;
-        };
         for (var element in collisions) {
             _fallingObjectCount--;
             _board.Remove(collisions[element]);

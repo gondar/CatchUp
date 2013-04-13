@@ -22,7 +22,6 @@ GameView.prototype.CreateFabricInDiv = function(id){
 	this._canvas = new fabric.Canvas(this.canvasId);
 	this._canvas.setWidth(this._width);
 	this._canvas.setHeight(this._height);
-    this._canvas.setBackgroundImage("https://raw.github.com/gondar/CatchUp/master/img/tlo.png");
     return this._canvas;
 }
 

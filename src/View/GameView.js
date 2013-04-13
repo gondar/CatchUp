@@ -12,9 +12,8 @@ GameView.KEYBOARD_RIGHT = 39;
 GameView.prototype._add = function(name, element) {
 	if (name in this._elementsOnBoard)
 		return;
-	var fabric = element.GetFabric();
-	this._elementsOnBoard[name] = fabric;
-	this._canvas.add(fabric);
+	element.AddToCanvas(this._canvas);
+	this._elementsOnBoard[name] = element
 }
 
 GameView.prototype.CreateFabricInDiv = function(id){
@@ -49,7 +48,7 @@ GameView.prototype.Update = function() {
 			continue;
 		if (key == "Points")
 			continue;
-		this._canvas.remove(this._elementsOnBoard[key]);
+		this._elementsOnBoard[key].RemoveFromCanvas();
 		delete this._elementsOnBoard[key];		
 	}
 	var pointsView = this.gameBoard.GetPointsCounter().GetView();

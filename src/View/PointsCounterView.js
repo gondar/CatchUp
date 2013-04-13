@@ -24,3 +24,7 @@ PointsCounterView.prototype.Update = function(){
 PointsCounterView.prototype.GetFabric = function(){
 	return this._fabric;
 }
+
+PointsCounterView.prototype.AddToCanvas = function(canvas){
+    canvas.add(this._fabric);
+}

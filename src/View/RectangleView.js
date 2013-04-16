@@ -18,7 +18,7 @@ RectangleView.prototype.RemoveFromCanvas = function(){
     this._fabric.setElement(document.getElementById('fallingObjectEnd'));
     this._fabric.animate('opacity', 0, {
         onChange: this._canvas.renderAll.bind(this._canvas),
-        onComplete: this._canvas.remove.bind(this._fabric),
+        onComplete: this._canvas.remove.bind(this._canvas,this._fabric),
         duration: 500
     });
 }

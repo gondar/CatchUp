@@ -21,6 +21,7 @@ GameView.prototype.CreateFabricInDiv = function(id){
 	this._canvas = new fabric.Canvas(this.canvasId);
 	this._canvas.setWidth(this._width);
 	this._canvas.setHeight(this._height);
+    this._canvas.setBackgroundImage("http://upload.wikimedia.org/wikipedia/commons/8/81/Sky_over_Washington_Monument.JPG");
     return this._canvas;
 }
 
@@ -54,4 +55,5 @@ GameView.prototype.Update = function() {
 	var pointsView = this.gameBoard.GetPointsCounter().GetView();
 	this._add("Points", pointsView);
 	pointsView.Update();
+    console.log(this._canvas.getObjects().length);
 }

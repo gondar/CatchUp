@@ -12,7 +12,7 @@ function CollisionDetector(){
 		var x2 = x1+object1.Dimensions.Width;
 		var o2_x1 = object2.Position.x;
 		var range = [o2_x1,o2_x1+object2.Dimensions.Width];
-        console.log("x1: "+x1+" x2: "+  x2+" o2_x1: "+o2_x1 + " o2_x2: "+range[1]);
+        //console.log("x1: "+x1+" x2: "+  x2+" o2_x1: "+o2_x1 + " o2_x2: "+range[1]);
 		if (IsInRange(x1,range) || IsInRange(x2,range) || IsInInclusiveRange(o2_x1,[x1,x2]))
 			return true;
 		return false;

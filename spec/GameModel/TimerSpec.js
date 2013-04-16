@@ -4,14 +4,20 @@ describe("GameTimer", function(){
        var subject;
 
        beforeEach(function(){
+           jasmine.Clock.useMock();
            subject = new GameTimer();
            subject.Start();
-           var date = new Date();
-           while(new Date().getTime() - date.getTime() < 300)
-           {
-
-           }
+           jasmine.Clock.tick(300);
+//           var date = new Date();
+//           while(new Date().getTime() - date.getTime() < 300)
+//           {
+//
+//           }
            outcome = subject.Stop();
+       });
+
+       afterEach(function(){
+
        });
 
        it("returns valid time when stopped",function(){

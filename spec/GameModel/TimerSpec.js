@@ -2,12 +2,15 @@ describe("GameTimer", function(){
    describe("When counting time", function(){
        var outcome;
        var subject;
+       var clock;
+
+       afterEach(function () { clock.restore(); });
 
        beforeEach(function(){
-           jasmine.Clock.useMock();
+           clock = sinon.useFakeTimers();
            subject = new GameTimer();
            subject.Start();
-           jasmine.Clock.tick(300);
+           clock.tick(300);
 //           var date = new Date();
 //           while(new Date().getTime() - date.getTime() < 300)
 //           {

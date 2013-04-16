@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RectangleView.js" afterPath="$PROJECT_DIR$/src/View/RectangleView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsTestDriver.conf" afterPath="$PROJECT_DIR$/jsTestDriver.conf" />
     </list>
     <ignored path="CatchUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +21,7 @@
     <file path="/Game.html" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1365896398218" ignored="false" />
     <file path="/fragment.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362853934250" ignored="false" />
     <file path="/GameEndView.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362915423156" ignored="false" />
-    <file path="/TimerSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366125536859" ignored="false" />
+    <file path="/TimerSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366130754984" ignored="false" />
     <file path="/GameTimer.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362881003109" ignored="false" />
     <file path="/PlayerView.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1365895701453" ignored="false" />
     <file path="/PlayerViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362919157640" ignored="false" />
@@ -34,6 +34,7 @@
     <file path="/CollisionDetector.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1365885792843" ignored="false" />
     <file path="/GameViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366128444921" ignored="false" />
     <file path="/RectangleViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366128852671" ignored="false" />
+    <file path="/jsTestDriver.conf" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366130811421" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +57,16 @@
       <file leaf-file-name="TimerSpec.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/GameModel/TimerSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="33" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
+            <state line="12" column="30" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jsTestDriver.conf" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.35416666">
               <folding />
             </state>
           </provider>
@@ -71,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RectangleViewSpec.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RectangleViewSpec.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/View/RectangleViewSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="107" selection-start="827" selection-end="827" vertical-scroll-proportion="0.6577381">
+            <state line="31" column="107" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,7 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/GameStartView.js" />
         <option value="$PROJECT_DIR$/src/PlayerView.js" />
         <option value="$PROJECT_DIR$/src/GameBoard.js" />
         <option value="$PROJECT_DIR$/src/GameModel/Game.js" />
@@ -119,10 +128,11 @@
         <option value="$PROJECT_DIR$/src/GameModel/CollisionDetector.js" />
         <option value="$PROJECT_DIR$/src/GameModel/GameBoard.js" />
         <option value="$PROJECT_DIR$/src/View/GameView.js" />
-        <option value="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
         <option value="$PROJECT_DIR$/spec/View/GameViewSpec.js" />
         <option value="$PROJECT_DIR$/src/View/RectangleView.js" />
         <option value="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
+        <option value="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
+        <option value="$PROJECT_DIR$/jsTestDriver.conf" />
       </list>
     </option>
   </component>
@@ -477,7 +487,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39712918" sideWeight="0.57438344" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.23788546" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.4931164" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42264754" sideWeight="0.56165475" order="2" side_tool="false" content_ui="tabs" x="6" y="441" width="683" height="273" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42264754" sideWeight="0.56165475" order="2" side_tool="false" content_ui="tabs" x="6" y="441" width="683" height="273" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.49482897" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -551,13 +561,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GameController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="291" selection-end="298" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="4" selection-start="56" selection-end="95" vertical-scroll-proportion="0.0">
@@ -607,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/GameModel/TimerSpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="33" selection-start="286" selection-end="286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="22" selection-start="1034" selection-end="1034" vertical-scroll-proportion="0.0">
@@ -658,7 +654,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/View/RectangleViewSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="107" selection-start="827" selection-end="827" vertical-scroll-proportion="0.6577381">
+        <state line="31" column="107" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/GameModel/TimerSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="30" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.35416666">
           <folding />
         </state>
       </provider>

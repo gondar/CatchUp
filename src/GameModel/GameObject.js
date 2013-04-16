@@ -1,16 +1,19 @@
 function GameObject(view){
-	this.Position = {x:0,y:0};
-	this.Dimensions = {Width:20,Height:20};
-	this.Color = '#000000';
-	this.Collision = false;
-	this._view = view;
-	view.SetModel(this);
-}
+    var _speedVector = {x:0, y:0};
+    var _position = {x:0, y:0};
+    var _dimensions = {Width:20,Height:20};
 
-GameObject.prototype.GetView = function() {
-	return this._view;
-}
-
-GameObject.prototype.GetSpeedVector = function(){
-    return {x:0, y:0};
+    var self = {
+        Collision: false,
+        Dimensions: _dimensions,
+        Position: _position,
+        GetView: function() {
+            return view;
+        },
+        GetSpeedVector: function(){
+            return _speedVector;
+        }
+    }
+    view.SetModel(self);
+    return self;
 }

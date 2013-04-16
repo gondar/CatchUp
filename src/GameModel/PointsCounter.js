@@ -1,10 +1,9 @@
 function PointsCounter(view){
 	var _points = 0;
-	var _view = view;
 	
 	var self = {	
 			GetView: function() {
-				return _view;
+				return view;
 			},
 			Points: _points
 	}

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameFactorySpec.js" afterPath="$PROJECT_DIR$/spec/GameFactorySpec.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameModel/GameObject.js" afterPath="$PROJECT_DIR$/src/GameModel/GameObject.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameModel/PointsCounter.js" afterPath="$PROJECT_DIR$/src/GameModel/PointsCounter.js" />
     </list>
     <ignored path="CatchUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +37,8 @@
     <file path="/RectangleViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366131750843" ignored="false" />
     <file path="/jsTestDriver.conf" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366130811421" ignored="false" />
     <file path="/GameObjectSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366134255468" ignored="false" />
-    <file path="/GameObject.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366134191953" ignored="false" />
+    <file path="/GameObject.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366134906390" ignored="false" />
+    <file path="/PointsCounter.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366134926953" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +71,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameObject.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameObject.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30357143">
+            <state line="11" column="8" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointsCounter.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameModel/PointsCounter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="35" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFactorySpec.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/GameFactorySpec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="11" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.2827381">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFactory.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="22" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="4" selection-start="30" selection-end="140" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="42" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
         <option value="$PROJECT_DIR$/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
         <option value="$PROJECT_DIR$/spec/View/GameViewSpec.js" />
@@ -104,14 +150,15 @@
         <option value="$PROJECT_DIR$/spec/GameControllerSpec.js" />
         <option value="$PROJECT_DIR$/Game.html" />
         <option value="$PROJECT_DIR$/spec/View/PlayerViewSpec.js" />
-        <option value="$PROJECT_DIR$/spec/GameFactorySpec.js" />
         <option value="$PROJECT_DIR$/src/View/GameView.js" />
         <option value="$PROJECT_DIR$/src/View/PlayerView.js" />
         <option value="$PROJECT_DIR$/src/GameFactory.js" />
         <option value="$PROJECT_DIR$/src/View/GameStartView.js" />
         <option value="$PROJECT_DIR$/src/GameModel/Game.js" />
-        <option value="$PROJECT_DIR$/src/GameModel/GameObject.js" />
         <option value="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" />
+        <option value="$PROJECT_DIR$/src/GameModel/GameObject.js" />
+        <option value="$PROJECT_DIR$/src/GameModel/PointsCounter.js" />
+        <option value="$PROJECT_DIR$/spec/GameFactorySpec.js" />
       </list>
     </option>
   </component>
@@ -540,13 +587,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/View/RectangleViewSpec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="38" selection-end="170" vertical-scroll-proportion="0.0">
@@ -570,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="4" selection-start="30" selection-end="140" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/View/PlayerViewSpec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="40" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
@@ -584,23 +617,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/GameFactorySpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="11" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/GameView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="24" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="32" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -615,13 +634,6 @@
     <entry file="file://$PROJECT_DIR$/src/GameModel/Game.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="41" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="88" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -653,9 +665,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="42" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="4" selection-start="30" selection-end="140" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="22" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30357143">
+        <state line="11" column="8" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameModel/PointsCounter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="35" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/GameFactorySpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="11" selection-start="1153" selection-end="1153" vertical-scroll-proportion="0.2827381">
           <folding />
         </state>
       </provider>

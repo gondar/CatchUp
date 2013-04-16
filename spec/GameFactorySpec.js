@@ -23,10 +23,6 @@ describe("Game Factory", function() {
 			
 			fallingObject = subject.BuildFallingObject(100);
 		});
-				
-		it("Creates a new Game Object", function() {		
-			expect(fallingObject instanceof GameObject).toBe(true);
-		});
 		
 		it("Sets properly it's position", function(){
 			expect(fallingObject.Position).not.toBe(undefined);
@@ -43,10 +39,6 @@ describe("Game Factory", function() {
 			var subject = new GameFactory();
 		
 			player = subject.BuildPlayer(100,100);
-		});
-		
-		it("Creates a new Game Object", function() {		
-			expect(player instanceof GameObject).toBe(true);
 		});
 	});
 	

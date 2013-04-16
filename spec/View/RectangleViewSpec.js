@@ -4,19 +4,7 @@ describe("RectangleView", function(){
 	beforeEach(function(){
 		view = new RectangleView();
 	});
-	
-	describe("when rendering element is requested", function(){
-		var fabric;
-		
-		beforeEach(function(){			
-			fabric = view.GetFabric()
-		});
-		
-		it("it returns base fabric object", function(){
-			expect(fabric).not.toBe(undefined);
-		});
-	});
-	
+
 	describe("model-view consistency",function(){
 		var model;	
 

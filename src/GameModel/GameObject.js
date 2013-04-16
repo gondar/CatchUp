@@ -10,3 +10,7 @@ function GameObject(view){
 GameObject.prototype.GetView = function() {
 	return this._view;
 }
+
+GameObject.prototype.GetSpeedVector = function(){
+    return {x:0, y:0};
+}

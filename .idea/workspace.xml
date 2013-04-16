@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/cloud.png" afterPath="$PROJECT_DIR$/img/cloud.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.html" afterPath="$PROJECT_DIR$/Game.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameModel/Game.js" afterPath="$PROJECT_DIR$/src/GameModel/Game.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameFactory.js" afterPath="$PROJECT_DIR$/src/GameFactory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameFactorySpec.js" afterPath="$PROJECT_DIR$/spec/GameFactorySpec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GameStartView.js" afterPath="$PROJECT_DIR$/src/View/GameStartView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/GameView.js" afterPath="$PROJECT_DIR$/src/View/GameView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/PlayerView.js" afterPath="$PROJECT_DIR$/src/View/PlayerView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/View/PlayerViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/PlayerViewSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameModel/GameObject.js" afterPath="$PROJECT_DIR$/src/GameModel/GameObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" afterPath="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" />
     </list>
     <ignored path="CatchUp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,6 +35,8 @@
     <file path="/GameViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366128444921" ignored="false" />
     <file path="/RectangleViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366131750843" ignored="false" />
     <file path="/jsTestDriver.conf" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366130811421" ignored="false" />
+    <file path="/GameObjectSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366134255468" ignored="false" />
+    <file path="/GameObject.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366134191953" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,93 +56,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GameFactory.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+      <file leaf-file-name="GameObjectSpec.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="88" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameStartView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/GameStartView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="153" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GameModel/Game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="41" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.10793651">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/PlayerView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="32" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerViewSpec.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/View/PlayerViewSpec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="40" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameFactorySpec.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/GameFactorySpec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="11" selection-start="1382" selection-end="1382" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/GameView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="24" selection-start="1350" selection-end="1350" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RectangleView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="4" selection-start="30" selection-end="140" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="19" selection-start="1750" selection-end="1756" vertical-scroll-proportion="-7.8461537">
+            <state line="51" column="59" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#228#475#0" expanded="false" />
+                <element signature="e#533#798#0" expanded="false" />
+                <element signature="e#850#988#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameObject.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameObject.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+            <state line="6" column="28" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30357143">
               <folding />
             </state>
           </provider>
@@ -171,8 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/GameModel/GameBoard.js" />
-        <option value="$PROJECT_DIR$/src/View/RectangleView.js" />
         <option value="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
         <option value="$PROJECT_DIR$/jsTestDriver.conf" />
         <option value="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
@@ -187,6 +110,8 @@
         <option value="$PROJECT_DIR$/src/GameFactory.js" />
         <option value="$PROJECT_DIR$/src/View/GameStartView.js" />
         <option value="$PROJECT_DIR$/src/GameModel/Game.js" />
+        <option value="$PROJECT_DIR$/src/GameModel/GameObject.js" />
+        <option value="$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js" />
       </list>
     </option>
   </component>
@@ -338,7 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="GameModel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -615,13 +540,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/GameModel/TimerSpec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="30" selection-start="357" selection-end="357" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jsTestDriver.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="22" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
@@ -645,23 +563,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="14" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/GameControllerSpec.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="33" selection-start="1020" selection-end="1020" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -670,15 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="4" selection-start="30" selection-end="140" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Game.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="19" selection-start="1750" selection-end="1756" vertical-scroll-proportion="-7.8461537">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="88" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/GameStartView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="153" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0">
@@ -726,7 +614,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameModel/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="41" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.10793651">
+        <state line="47" column="41" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameFactory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="88" selection-start="994" selection-end="994" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="19" selection-start="1582" selection-end="1592" vertical-scroll-proportion="-5.8846154">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="14" selection-start="1507" selection-end="1507" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/GameModel/GameObjectSpec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="59" selection-start="1282" selection-end="1282" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#228#475#0" expanded="false" />
+            <element signature="e#533#798#0" expanded="false" />
+            <element signature="e#850#988#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameModel/GameObject.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="28" selection-start="187" selection-end="187" vertical-scroll-proportion="0.30357143">
           <folding />
         </state>
       </provider>

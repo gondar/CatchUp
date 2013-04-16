@@ -21,16 +21,6 @@ describe("GameObject", function(){
 		});
 	});
 	
-	describe("When setting object color",function(){
-		beforeEach(function(){
-			subject.Color ='#00f0f0';
-		});
-		
-		it("it changed color", function(){
-			expect(subject.Color).toBe('#00f0f0');
-		});
-	});
-	
 	describe("When setting object dimension", function(){
 		beforeEach(function(){
 			subject.Dimensions = {Width:10,Height:20};
@@ -45,7 +35,7 @@ describe("GameObject", function(){
 		});
 	});
 	
-	describe("when getting accessing object view",function(){
+	describe("when getting object view",function(){
 		beforeEach(function(){	 
 			result = subject.GetView();
 		});
@@ -54,4 +44,13 @@ describe("GameObject", function(){
 			expect(result).toBe(view)
 		});
 	});
+
+    describe("when updating object speed vector", function(){
+        describe("When vector is not set", function(){
+            it("it is equal zero vector", function(){
+                expect(subject.GetSpeedVector().x).toBe(0);
+                expect(subject.GetSpeedVector().y).toBe(0);
+            });
+        });
+    });
 });

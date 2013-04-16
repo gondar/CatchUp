@@ -43,5 +43,4 @@ GameView.prototype.Update = function() {
 	var pointsView = this.gameBoard.GetPointsCounter().GetView();
 	this._add("Points", pointsView);
 	pointsView.Update();
-    console.log(this._canvas.getObjects().length);
 }

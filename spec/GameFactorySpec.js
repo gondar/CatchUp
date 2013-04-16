@@ -5,7 +5,7 @@ describe("Game Factory", function() {
 			var subject = new GameFactory();
 			var  gameSpy = jasmine.createSpyObj("GameController",["Initialize"]);
 			spyOn(window,"GameController").andReturn(gameSpy);
-            setFixtures("<img id='fallingObject'/>");
+            setFixtures("<img id='fallingObject'/><img id='player'/>");
 			
 			game = subject.BuildGame();
 		});
@@ -47,11 +47,6 @@ describe("Game Factory", function() {
 		
 		it("Creates a new Game Object", function() {		
 			expect(player instanceof GameObject).toBe(true);
-		});
-		
-		it("Sets properly it's position", function(){
-			expect(player.Position.x).toBe(50);
-			expect(player.Position.y).toBe(100-30);
 		});
 	});
 	

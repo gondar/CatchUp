@@ -45,7 +45,7 @@ function Game(board, factory, limit, width, height, playerObjectName, pointsCoun
             _moveAndAddFallingObjects(fallingObjectString);
             if (_fallingObjectCount < _limit)
                 _addFallingObject(fallingObjectString);
-            if (_pointsCounter.Points >= 100) {
+            if (_pointsCounter.Points >= 30) {
                 this.GameState = Game.FINISHED;
                 _gameTimer.Stop();
             }

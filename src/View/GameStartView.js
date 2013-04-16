@@ -7,11 +7,12 @@ function GameStartView(){
         height: 2048,
         opacity: 0.96
     });
-    var _fabricText = new fabric.Text("Press right or left arrow key to start a game...", {
-        top: 40,
+    var _fabricText = new fabric.Text("Angels are falling!\n\n Catch them all before they will be damned!\n\nPress right or left arrow key to start a game...", {
+        top: 100,
         fontStyle: 'italic',
         fontFamily: 'Delicious',
-        fontSize: 20
+        fontSize: 20,
+        textAlign: "center"
     });
     var _model;
     var _canvas = null;

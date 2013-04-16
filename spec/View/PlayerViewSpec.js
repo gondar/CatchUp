@@ -2,7 +2,7 @@ describe("PlayerView", function(){
     var view;
 
     beforeEach(function(){
-        //setFixtures("<div id='fallingObject'></div>");
+        setFixtures("<img id='player' />");
         view = new PlayerView();
     });
     describe("when initialized key press listening", function(){

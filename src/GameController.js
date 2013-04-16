@@ -9,10 +9,9 @@ function GameController(view, gameBoard, player, speed, game, gameStartView, gam
     var _fabric;
     var _timerEventInterval;
 
-    function InitializeBoardAndBoardView(playerName, gameDivId, controller) {
+    function InitializeBoardAndBoardView(gameDivId) {
         _board.AddPlayer(_player);
         _fabric = _boardView.CreateFabricInDiv(gameDivId);
-        _boardView.AddKeypressListeners(controller);
         _boardView.Update();
     }
 
@@ -47,12 +46,12 @@ function GameController(view, gameBoard, player, speed, game, gameStartView, gam
             _player.GetView().Update();
             _fabric.renderAll();
         },
-        Initialize: function(gameDivId, playerName) {
+        Initialize: function(gameDivId) {
             var controller = this;
             _timerEventInterval = setInterval(function() {
                 controller.TimerEvent();
             }, _gameSpeed);
-            InitializeBoardAndBoardView(playerName, gameDivId, controller);
+            InitializeBoardAndBoardView(gameDivId);
             InitializePlayerView(controller);
             InitializeGameStart(controller);
             InittializeGameEnd(controller);

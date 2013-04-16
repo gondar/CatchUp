@@ -18,7 +18,7 @@ describe("GameController", function(){
             subject = deps.controller;
 			divId = "#id";
 		
-			subject.Initialize(divId,"player");
+			subject.Initialize(divId);
 		});
 		
 		it("adds player on board", function(){	
@@ -31,9 +31,8 @@ describe("GameController", function(){
             expect(player.GetView().Update).toHaveBeenCalled();
         });
 		
-		it("creates fabric in div", function(){
+		it("Initializes game view", function(){
 			expect(gameView.CreateFabricInDiv).toHaveBeenCalledWith("#id");
-			expect(gameView.AddKeypressListeners).toHaveBeenCalledWith(subject);
 			expect(gameView.Update).toHaveBeenCalled();
 		});
 

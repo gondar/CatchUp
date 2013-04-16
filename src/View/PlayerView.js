@@ -19,6 +19,15 @@ function PlayerView(){
             _addToCanvas();
         },
         AddKeypressListeners: function(controller) {
+            $(document).keydown({controller: controller}, function(event){
+                var controller = event.data.controller;
+                if (event.which == GameView.KEYBOARD_LEFT){
+                    controller.MovePlayerLeft();
+                }
+                if (event.which == GameView.KEYBOARD_RIGHT){
+                    controller.MovePlayerRight();
+                }
+            })
         },
         Update: function(){
             if (_fabric == null)

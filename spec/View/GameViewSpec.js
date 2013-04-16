@@ -11,38 +11,6 @@ describe("GameView", function(){
 		expect(subject._canvas.getHeight()).toBe(200);
 	});
 	
-	it("listens for the left keyboard press", function(){	
-		var board = null;
-		var controller = jasmine.createSpyObj('BoardController',['MovePlayerLeft']);
-		var subject = new GameView(board);
-		
-		subject.AddKeypressListeners(controller)
-		var key = jQuery.Event("keydown");
-		key.which = GameView.KEYBOARD_LEFT;
-		$(document).trigger(key);
-		
-		expect(controller.MovePlayerLeft).toHaveBeenCalled();
-	
-		//cleanup
-		$(document).off();
-	});
-	
-	it("listens for the right keyboard press", function(){	
-		var board = null;
-		var controller = jasmine.createSpyObj('BoardController',['MovePlayerRight']);
-		var subject = new GameView(board);
-		
-		subject.AddKeypressListeners(controller)
-		var key = jQuery.Event("keydown");
-		key.which = GameView.KEYBOARD_RIGHT;
-		$(document).trigger(key);
-		
-		expect(controller.MovePlayerRight).toHaveBeenCalled();
-		 
-		//cleanup
-		$(document).off();
-	});
-	
 	it("adds game objects to canvas only once", function(){
 		var board = mockGameBoard();
 		var controller = null;

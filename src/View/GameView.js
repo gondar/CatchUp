@@ -25,18 +25,6 @@ GameView.prototype.CreateFabricInDiv = function(id){
     return this._canvas;
 }
 
-GameView.prototype.AddKeypressListeners = function(controller) {
-	$(document).keydown({controller: controller}, function(event){
-		var controller = event.data.controller;
-		if (event.which == GameView.KEYBOARD_LEFT){
-			controller.MovePlayerLeft();
-		}		
-		if (event.which == GameView.KEYBOARD_RIGHT){
-			controller.MovePlayerRight();
-		}
-	})
-}
-
 GameView.prototype.Update = function() {
 	var elements = this.gameBoard.GetObjectsOnBoard();
 	for (var key in elements) {

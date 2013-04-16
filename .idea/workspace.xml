@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bd299df-c0b1-436a-89bb-56518fe95aee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/RectangleView.js" afterPath="$PROJECT_DIR$/src/View/RectangleView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" afterPath="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
     </list>
     <ignored path="CatchUp.iws" />
@@ -32,6 +33,7 @@
     <file path="/.gitignore" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1362960272906" ignored="false" />
     <file path="/CollisionDetector.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1365885792843" ignored="false" />
     <file path="/GameViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366128444921" ignored="false" />
+    <file path="/RectangleViewSpec.js" changelist="5bd299df-c0b1-436a-89bb-56518fe95aee" time="1366128852671" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,7 @@
       <file leaf-file-name="GameViewSpec.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/View/GameViewSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="63" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+            <state line="49" column="8" selection-start="1440" selection-end="1478" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,16 +74,7 @@
       <file leaf-file-name="RectangleViewSpec.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/View/RectangleViewSpec.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="4" selection-start="110" selection-end="110" vertical-scroll-proportion="0.13095239">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/GameView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="19" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+            <state line="31" column="107" selection-start="827" selection-end="827" vertical-scroll-proportion="0.6577381">
               <folding />
             </state>
           </provider>
@@ -90,7 +83,7 @@
       <file leaf-file-name="RectangleView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="40" selection-start="409" selection-end="425" vertical-scroll-proportion="0.0">
+            <state line="28" column="85" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,9 +119,9 @@
         <option value="$PROJECT_DIR$/src/GameModel/CollisionDetector.js" />
         <option value="$PROJECT_DIR$/src/GameModel/GameBoard.js" />
         <option value="$PROJECT_DIR$/src/View/GameView.js" />
-        <option value="$PROJECT_DIR$/src/View/RectangleView.js" />
         <option value="$PROJECT_DIR$/spec/GameModel/TimerSpec.js" />
         <option value="$PROJECT_DIR$/spec/View/GameViewSpec.js" />
+        <option value="$PROJECT_DIR$/src/View/RectangleView.js" />
         <option value="$PROJECT_DIR$/spec/View/RectangleViewSpec.js" />
       </list>
     </option>
@@ -474,7 +467,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="778" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -484,7 +477,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39712918" sideWeight="0.57438344" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21823932" sideWeight="0.23788546" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3986711" sideWeight="0.4931164" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42264754" sideWeight="0.56165475" order="2" side_tool="false" content_ui="tabs" x="6" y="441" width="683" height="273" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42264754" sideWeight="0.56165475" order="2" side_tool="false" content_ui="tabs" x="6" y="441" width="683" height="273" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32695374" sideWeight="0.49482897" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -651,21 +644,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/View/GameViewSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="63" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0">
+        <state line="49" column="8" selection-start="1440" selection-end="1478" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/View/RectangleView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="409" selection-end="425" vertical-scroll-proportion="0.0">
+        <state line="28" column="85" selection-start="898" selection-end="898" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/View/RectangleViewSpec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="4" selection-start="110" selection-end="110" vertical-scroll-proportion="0.13095239">
+        <state line="31" column="107" selection-start="827" selection-end="827" vertical-scroll-proportion="0.6577381">
           <folding />
         </state>
       </provider>

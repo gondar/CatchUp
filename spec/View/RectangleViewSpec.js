@@ -2,7 +2,8 @@ describe("RectangleView", function(){
 	var view;
 	
 	beforeEach(function(){
-		view = new RectangleView();
+        setFixtures("<div id='fallingObject'></div>");
+        view = new RectangleView();
 	});
 
 	describe("model-view consistency",function(){
@@ -27,13 +28,13 @@ describe("RectangleView", function(){
 			});
 			
 			it("updates fabric position", function(){
-				expect(view.GetFabric().left).toBe(model.Position.x);
-				expect(view.GetFabric().top).toBe(model.Position.y);
+				expect(view._fabric.left).toBe(model.Position.x);//this is ok because fixture fabric width is 0
+				expect(view._fabric.top).toBe(model.Position.y); //this is ok because fixture fabric height is 0
 			});
 			
-			it("updates dimensions", function(){
-				expect(view.GetFabric().width).toBe(model.Dimensions.Width);
-				expect(view.GetFabric().height).toBe(model.Dimensions.Height);
+			it("updates dimensions in model", function(){
+				expect(view._fabric.width).toBe(model.Dimensions.Width);
+				expect(view._fabric.height).toBe(model.Dimensions.Height);
 			});
 		});
 	});

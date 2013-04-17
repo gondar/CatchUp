@@ -59,17 +59,3 @@ GameBoard.prototype.GetPlayerCollisions = function(){
 GameBoard.prototype.Remove = function(name) {
 	delete this.elements[name];
 }
-
-GameBoard.prototype.MoveRight = function() {
-	this._Move(10);
-}
-
-GameBoard.prototype.MoveLeft = function() {
-	this._Move(-10);
-}
-
-GameBoard.prototype._Move = function(direction){
-	var currentPosition = this._player.Position.x;
-	var newPosition = currentPosition + direction;
-	this._player.Position.x = newPosition;
-}

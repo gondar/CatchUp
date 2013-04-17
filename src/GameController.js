@@ -57,11 +57,11 @@ function GameController(view, gameBoard, player, speed, game, gameStartView, gam
             InittializeGameEnd(controller);
         },
         MovePlayerLeft: function() {
-            _board.MoveLeft("player");
+            _player.MoveLeft();
             _boardView.Update();
         },
         MovePlayerRight: function() {
-            _board.MoveRight("player");
+            _player.MoveRight();
             _boardView.Update();
         },
         StartGame: function() {

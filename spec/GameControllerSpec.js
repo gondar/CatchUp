@@ -51,20 +51,20 @@ describe("GameController", function(){
 	
 	describe("When Player Move Left Event Received", function(){
 		var view;
-		var board;
+		var player;
 		var subject;
 	
 		beforeEach(function() {
 			view = jasmine.createSpyObj("GameView",["Update"]);
-			board = jasmine.createSpyObj("GameBoard",["MoveLeft"]);
+            player = jasmine.createSpyObj("Player",["MoveLeft"]);
             var mockGame = jasmine.createSpyObj("Game",["IsPaused"]);
-			subject = new GameController(view, board, null,100, mockGame);
-			
+			subject = new GameController(view, null, player ,100, mockGame);
+
 			subject.MovePlayerLeft();
 		});
 		
 		it("passes event to game board", function() {
-			expect(board.MoveLeft).toHaveBeenCalledWith("player");
+			expect(player.MoveLeft).toHaveBeenCalled();
 		});
 		
 		it("updates board view", function() {
@@ -74,20 +74,20 @@ describe("GameController", function(){
 		
 	describe("When Player Move Right Event Received", function(){
 		var view;
-		var board;
+		var player;
 		var subject;
 	
 		beforeEach(function() {
 			view = jasmine.createSpyObj("GameView",["Update"]);
-			board = jasmine.createSpyObj("GameBoard",["MoveRight"]);
+			player = jasmine.createSpyObj("Player",["MoveRight"]);
             var mockGame = jasmine.createSpyObj("MockGame",["IsPaused"]);
-			subject = new GameController(view, board, null, 100, mockGame);
+			subject = new GameController(view, null, player, 100, mockGame);
 			
 			subject.MovePlayerRight();
 		});
 		
-		it("passes event to game board", function() {
-			expect(board.MoveRight).toHaveBeenCalledWith("player");
+		it("passes event to a player object", function() {
+			expect(player.MoveRight).toHaveBeenCalled();
 		});
 		
 		it("updates board view", function() {

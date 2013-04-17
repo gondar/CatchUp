@@ -19,7 +19,7 @@ GameFactory.prototype.BuildGame = function(gameDiv, gameSpeed, limit, width, hei
 }
 
 GameFactory.prototype.BuildPlayer = function(boardWidth,boardHeight) {
-    var gameObject = new GameObject(new PlayerView());
+    var gameObject = new Player(new PlayerView());
     gameObject.Position = {x:boardWidth/2, y:boardHeight-gameObject.Dimensions.Height   };
     return gameObject;
 }

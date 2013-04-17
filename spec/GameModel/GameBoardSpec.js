@@ -137,24 +137,4 @@ describe("GameBoard", function() {
 		expect(objects["Object1"]).toEqual(object1);
 		expect(objects["Object2"]).toEqual(object2);
 	});
-	
-	it("allows to move object right", function(){
-		var subject = new GameBoard();
-        var player = {"Position": {x:0	,y:0}};
-        subject.AddPlayer(player);
-		
-		subject.MoveRight();
-		
-		expect(player.Position).toEqual({x:10,y:0});
-	});
-	
-	it("allows to move player left", function(){
-		var subject = new GameBoard();
-		var player = {"Position": {x:10	,y:0}};
-		subject.AddPlayer(player);
-		
-		subject.MoveLeft();
-		
-		expect(player.Position).toEqual({x:0,y:0});
-	});
 });
